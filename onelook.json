@@ -1,0 +1,386 @@
+{
+  "schema": 1,
+  "project": "onelook",
+  "name": "OneLook",
+  "generated_at": "2026-09-13T18:18:10-05:00",
+  "emitted_by": {
+    "kind": "wrap"
+  },
+  "card": {
+    "pitch": "iOS productivity app built by dispatched coding agents, gated by CI, with every decision locked in an append-only log.",
+    "chip": "Paused · no external users",
+    "tone": "steel",
+    "caveat": "A working app and a working build pipeline with zero external users and no TestFlight build — its own audit named \"factory before customers\" as the top risk.",
+    "dossier": "/work/agentic-build-system",
+    "since": null
+  },
+  "groups": [
+    {
+      "id": "orchestrator",
+      "label": "Orchestrator",
+      "detail": "dispatch to merge"
+    },
+    {
+      "id": "runtime",
+      "label": "Runtime",
+      "detail": "what is still up"
+    }
+  ],
+  "subsystems": [
+    {
+      "id": "dispatch",
+      "label": "dispatch",
+      "group": "orchestrator",
+      "kind": "stage",
+      "state": "idle",
+      "detail": "fire-and-forget",
+      "last": null
+    },
+    {
+      "id": "build-agent",
+      "label": "build agent",
+      "group": "orchestrator",
+      "kind": "stage",
+      "state": "idle",
+      "detail": "haiku / sonnet / opus by tier · 40 turns",
+      "last": null
+    },
+    {
+      "id": "test-gate",
+      "label": "test gate",
+      "group": "orchestrator",
+      "kind": "gate",
+      "state": "idle",
+      "detail": "xcodebuild · GREEN iff exit 0 AND \"TEST SUCCEEDED\"",
+      "last": null
+    },
+    {
+      "id": "commit-agent",
+      "label": "commit agent",
+      "group": "orchestrator",
+      "kind": "stage",
+      "state": "idle",
+      "detail": "GREEN commits · RED parks on wip/",
+      "last": null
+    },
+    {
+      "id": "pr",
+      "label": "PR",
+      "group": "orchestrator",
+      "kind": "stage",
+      "state": "idle",
+      "last": null
+    },
+    {
+      "id": "ci",
+      "label": "CI",
+      "group": "orchestrator",
+      "kind": "gate",
+      "state": "idle",
+      "detail": "self-hosted macOS · gitleaks · tamper guard",
+      "last": null
+    },
+    {
+      "id": "auto-merge",
+      "label": "auto-merge",
+      "group": "orchestrator",
+      "kind": "stage",
+      "state": "idle",
+      "last": null
+    },
+    {
+      "id": "briefing",
+      "label": "Daily Briefing",
+      "group": "runtime",
+      "kind": "worker",
+      "state": "live",
+      "detail": "Haiku",
+      "last": null
+    },
+    {
+      "id": "feedback",
+      "label": "feedback pipeline",
+      "group": "runtime",
+      "kind": "worker",
+      "state": "live",
+      "detail": "embed → cluster → classify → email",
+      "last": null
+    },
+    {
+      "id": "hardening",
+      "label": "backend hardening",
+      "group": "runtime",
+      "kind": "stage",
+      "state": "built",
+      "last": null
+    }
+  ],
+  "rings": [
+    {
+      "label": "orchestrator",
+      "detail": "a client-spawned MCP server — nothing runs unattended"
+    }
+  ],
+  "state_machines": [
+    {
+      "label": "Handoff state machine",
+      "note": "persisted as one line",
+      "states": [
+        "IDLE",
+        "AWAITING_AGENT",
+        "IN_PROGRESS",
+        "AWAITING_COMMIT",
+        "COMPLETED"
+      ],
+      "current": "IDLE",
+      "exits": [
+        "FAILED",
+        "AWAITING_COWORK"
+      ],
+      "persisted_in": "AGENT_HANDOFF.md",
+      "since": "2026-08-24"
+    }
+  ],
+  "services": [],
+  "slots": {
+    "agents": [
+      {
+        "label": "run_frontend_agent",
+        "detail": "fire-and-forget"
+      },
+      {
+        "label": "run_backend_agent",
+        "detail": "blocking"
+      },
+      {
+        "label": "commit agent",
+        "detail": "nested"
+      }
+    ],
+    "workflows": [
+      {
+        "label": "dispatch-to-merge pipeline"
+      },
+      {
+        "label": "content flag → publish queue"
+      },
+      {
+        "label": "self-commissioned audit → remediation tracker",
+        "detail": "4 audit + 3 verification agents"
+      },
+      {
+        "label": "wrap up"
+      },
+      {
+        "label": "kickoff brief"
+      }
+    ],
+    "skills": [
+      {
+        "label": "5 session roles"
+      },
+      {
+        "label": "tooling routing",
+        "detail": "visual → design prompt; behavioral → dispatch"
+      }
+    ],
+    "gates": [
+      {
+        "label": "commit-on-green"
+      },
+      {
+        "label": "Build & Test",
+        "detail": "required"
+      },
+      {
+        "label": "test-tamper guard",
+        "detail": "fails on any net loss of tests"
+      },
+      {
+        "label": "gitleaks",
+        "detail": "required"
+      },
+      {
+        "label": "SwiftLint",
+        "detail": "advisory"
+      },
+      {
+        "label": "cwd jail",
+        "detail": "6 deny patterns"
+      },
+      {
+        "label": "rate-limit abort",
+        "detail": "stash + FAILED"
+      },
+      {
+        "label": "babysit protocol",
+        "detail": "independent re-run · never trust an agent's green"
+      },
+      {
+        "label": "Supabase keepalive",
+        "detail": "fails loudly"
+      }
+    ]
+  },
+  "schedules": [
+    {
+      "id": "ci",
+      "runner": "CI",
+      "cadence": "on PR · 5 jobs",
+      "last": null
+    },
+    {
+      "id": "keepalive",
+      "runner": "cron",
+      "cadence": "keepalive · daily 07:00 UTC",
+      "tz": "UTC",
+      "last": null
+    },
+    {
+      "id": "ui-tests",
+      "runner": "cron",
+      "cadence": "UI tests · daily 08:00 UTC",
+      "tz": "UTC",
+      "last": null
+    },
+    {
+      "id": "feedback",
+      "runner": "webhook",
+      "cadence": "feedback INSERT → process",
+      "last": null
+    }
+  ],
+  "last_significant": {
+    "ts": "2026-08-24",
+    "kind": "decision",
+    "line": "QuickAdd + TaskRow migrated to design tokens; receiver-based token-family rule + numeric-literal audit detector locked as standing convention…",
+    "ref": "DEC-041"
+  },
+  "events": [
+    {
+      "ts": "2026-08-24 21:11",
+      "kind": "ship",
+      "line": "chore(docs): mirror DEC-038..041 and lock token-family rule in build rulebook",
+      "ref": "#30"
+    },
+    {
+      "ts": "2026-08-24 21:07",
+      "kind": "ship",
+      "line": "refactor(tasks): migrate TaskRow fonts to design tokens",
+      "ref": "#29"
+    },
+    {
+      "ts": "2026-08-24 20:50",
+      "kind": "ship",
+      "line": "refactor(quickadd): migrate QuickAddFAB font to design token",
+      "ref": "#28"
+    },
+    {
+      "ts": "2026-08-24",
+      "kind": "decision",
+      "line": "QuickAdd + TaskRow migrated to design tokens; receiver-based token-family rule + numeric-literal audit detector locked as standing convention…",
+      "ref": "DEC-041"
+    },
+    {
+      "ts": "2026-08-21 07:09",
+      "kind": "ship",
+      "line": "refactor(quickadd): migrate QuickAddCaptureSheet fonts to design tokens",
+      "ref": "#27"
+    },
+    {
+      "ts": "2026-08-21 06:24",
+      "kind": "ship",
+      "line": "refactor(onboarding): migrate OnboardingDemoViews fonts to design tokens",
+      "ref": "#25"
+    },
+    {
+      "ts": "2026-08-21 06:03",
+      "kind": "ship",
+      "line": "refactor(onboarding): migrate remaining Onboarding fonts to design tokens (Confirmation + IntroCarousel)",
+      "ref": "#26"
+    },
+    {
+      "ts": "2026-08-21",
+      "kind": "decision",
+      "line": "Habits + Onboarding Views migrated to design tokens value-equivalently (completes screen migration except Tasks; extends DEC-039)",
+      "ref": "DEC-040"
+    },
+    {
+      "ts": "2026-08-01 15:33",
+      "kind": "ship",
+      "line": "refactor(habits): migrate OverviewHabitsView fonts to design tokens + add AppEmojiSize.pt16",
+      "ref": "#24"
+    },
+    {
+      "ts": "2026-08-01 15:19",
+      "kind": "ship",
+      "line": "refactor(habits): replace hardcoded fonts with design tokens in NewIdentityModal",
+      "ref": "#23"
+    },
+    {
+      "ts": "2026-07-31",
+      "kind": "decision",
+      "line": "Token inventory completed to full app coverage + zero-normalization Home migration (extends DEC-038)",
+      "ref": "DEC-039"
+    },
+    {
+      "ts": "2026-07-12",
+      "kind": "decision",
+      "line": "Token vocabulary expanded to match validated implementation (amends DEC-031)",
+      "ref": "DEC-038"
+    },
+    {
+      "ts": "2026-07-11",
+      "kind": "decision",
+      "line": "Supabase new API-key adoption + verify_jwt=false on client edge functions",
+      "ref": "DEC-037"
+    }
+  ],
+  "stories": [
+    {
+      "ref": "DEC-008",
+      "line": "DEC-008 reversed DEC-007 one day later — the review gate was a no-op."
+    },
+    {
+      "line": "Three false greens in one day, so an independent re-run rule followed."
+    },
+    {
+      "line": "A shell tool turned out to be a full-host RCE primitive — cwd jail and deny-list followed."
+    },
+    {
+      "line": "The agent hung at 0% CPU: it had inherited the MCP stream as stdin."
+    }
+  ],
+  "metrics": [
+    {
+      "label": "PRs merged",
+      "value": "28",
+      "unit": "three-check CI gate · zero human code review",
+      "source": "GitHub PR history",
+      "asof": "2026-08-24",
+      "load_bearing": true
+    },
+    {
+      "label": "decisions",
+      "value": "41",
+      "unit": "19 reverse or amend an earlier one",
+      "source": ".cobrain/decisions.jsonl",
+      "asof": "2026-08-24",
+      "load_bearing": false
+    }
+  ],
+  "cobrain": {
+    "repo": "OneLook",
+    "floor_tok": 48000,
+    "router_rows": 16,
+    "trigger_pass": "10/10",
+    "validation": "PASS · 1 warn",
+    "resident_tok": 7087,
+    "files_mapped": 41,
+    "events": 1,
+    "sessions": 18,
+    "leases": "4 · all released",
+    "sidecar_rows": 41
+  },
+  "caveats": []
+}

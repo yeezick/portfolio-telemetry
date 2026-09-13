@@ -1,0 +1,309 @@
+{
+  "schema": 1,
+  "project": "portfolio",
+  "name": "Portfolio pipeline",
+  "generated_at": "2026-09-13T21:06:05+00:00",
+  "emitted_by": {
+    "kind": "wrap"
+  },
+  "card": {
+    "pitch": "The build system behind this site: a planning session writes the brief, a coding agent owns the code, a failing test written first is the only way anything merges.",
+    "chip": "Live",
+    "tone": "ember",
+    "caveat": "Personal system; the coding agent has exclusive write access to the code and this page cannot edit it.",
+    "dossier": null,
+    "since": null
+  },
+  "groups": [
+    {
+      "id": "chain",
+      "label": "Chain",
+      "detail": "one linear chain, plan to deploy"
+    }
+  ],
+  "subsystems": [
+    {
+      "id": "plan",
+      "label": "plan",
+      "group": "chain",
+      "kind": "stage",
+      "state": "live",
+      "detail": "Cowork",
+      "last": null
+    },
+    {
+      "id": "handoff",
+      "label": "HANDOFF brief",
+      "group": "chain",
+      "kind": "stage",
+      "state": "live",
+      "last": null
+    },
+    {
+      "id": "test-author",
+      "label": "test-author",
+      "group": "chain",
+      "kind": "stage",
+      "state": "scheduled",
+      "detail": "one RED test, then hands back",
+      "last": null
+    },
+    {
+      "id": "main-agent",
+      "label": "main agent",
+      "group": "chain",
+      "kind": "stage",
+      "state": "scheduled",
+      "detail": "GREEN · owns every commit",
+      "last": null
+    },
+    {
+      "id": "pre-commit",
+      "label": "pre-commit",
+      "group": "chain",
+      "kind": "gate",
+      "state": "idle",
+      "detail": "gitleaks → lint → types → anti-mutation",
+      "last": null
+    },
+    {
+      "id": "pre-push",
+      "label": "pre-push",
+      "group": "chain",
+      "kind": "gate",
+      "state": "idle",
+      "detail": "related tests",
+      "last": null
+    },
+    {
+      "id": "pr-gate",
+      "label": "PR gate",
+      "group": "chain",
+      "kind": "gate",
+      "state": "idle",
+      "detail": "4 required + 3 advisory",
+      "last": null
+    },
+    {
+      "id": "auto-merge",
+      "label": "auto-merge",
+      "group": "chain",
+      "kind": "stage",
+      "state": "idle",
+      "last": null
+    },
+    {
+      "id": "deploy",
+      "label": "Railway deploy",
+      "group": "chain",
+      "kind": "stage",
+      "state": "idle",
+      "detail": "on merge to main",
+      "last": null
+    },
+    {
+      "id": "code-sync",
+      "label": "code-sync return",
+      "group": "chain",
+      "kind": "stage",
+      "state": "idle",
+      "last": null
+    },
+    {
+      "id": "ingest",
+      "label": "ingest",
+      "group": "chain",
+      "kind": "stage",
+      "state": "idle",
+      "last": null
+    }
+  ],
+  "rings": [],
+  "state_machines": [],
+  "services": [],
+  "slots": {
+    "agents": [
+      {
+        "label": "test-author",
+        "detail": "Sonnet · author-only · hard-blocked from non-test files and from git"
+      }
+    ],
+    "workflows": [
+      {
+        "label": "plan → HANDOFF → code-sync loop"
+      },
+      {
+        "label": "wrap-up",
+        "detail": "9 steps"
+      },
+      {
+        "label": "cross-sync",
+        "detail": "read-only pull of sibling repos into dossiers — feeds this page"
+      },
+      {
+        "label": "Material Decision Protocol"
+      },
+      {
+        "label": "Writing",
+        "detail": "drop an .mdx, push"
+      }
+    ],
+    "skills": [
+      {
+        "label": "git · testing · nextjs-ui · worktree"
+      },
+      {
+        "label": "/go · /verify-app · /affected"
+      },
+      {
+        "label": "/scaffold-route · /scaffold-component"
+      }
+    ],
+    "gates": [
+      {
+        "label": "PreToolUse",
+        "detail": "test-paths-only · no-git"
+      },
+      {
+        "label": "bash guard · write guard · format-on-stop"
+      },
+      {
+        "label": "Stop check",
+        "detail": "full Vitest + tsc"
+      },
+      {
+        "label": "gate-split TDD",
+        "detail": "blocking tests moved off pre-commit"
+      },
+      {
+        "label": "axe",
+        "detail": "WCAG 2.2 AA"
+      },
+      {
+        "label": "AI review",
+        "detail": "advisory"
+      },
+      {
+        "label": "Dependabot",
+        "detail": "weekly"
+      },
+      {
+        "label": "main ruleset"
+      }
+    ]
+  },
+  "schedules": [
+    {
+      "id": "ci",
+      "runner": "CI",
+      "cadence": "on PR",
+      "last": null
+    },
+    {
+      "id": "dependabot",
+      "runner": "Dependabot",
+      "cadence": "weekly",
+      "last": null
+    },
+    {
+      "id": "deploy",
+      "runner": "Railway",
+      "cadence": "on merge",
+      "last": null
+    }
+  ],
+  "last_significant": {
+    "ts": "2026-09-12 08:03",
+    "kind": "ship",
+    "line": "feat(systems): the Systems Monitor, Phase 1",
+    "ref": "#35"
+  },
+  "events": [
+    {
+      "ts": "2026-09-12 08:03",
+      "kind": "ship",
+      "line": "feat(systems): the Systems Monitor, Phase 1",
+      "ref": "#35"
+    },
+    {
+      "ts": "2026-09-09 11:55",
+      "kind": "ship",
+      "line": "ci: bump anthropics/claude-code-action from 1.0.210 to 1.0.217",
+      "ref": "#34"
+    },
+    {
+      "ts": "2026-09-02 11:55",
+      "kind": "ship",
+      "line": "ci: bump anthropics/claude-code-action from 1.0.201 to 1.0.210",
+      "ref": "#33"
+    },
+    {
+      "ts": "2026-08-30 05:32",
+      "kind": "ship",
+      "line": "feat(work): internalize the Build Record and the Ambito dossier",
+      "ref": "#32"
+    },
+    {
+      "ts": "2026-08-30 04:38",
+      "kind": "ship",
+      "line": "fix(content): 2026-08-21 integrity corrections + staged resignation copy flip",
+      "ref": "#23"
+    },
+    {
+      "ts": "2026-08-26 11:55",
+      "kind": "ship",
+      "line": "ci: bump anthropics/claude-code-action from 1.0.193 to 1.0.201",
+      "ref": "#31"
+    },
+    {
+      "ts": "2026-08-19 11:57",
+      "kind": "ship",
+      "line": "ci: bump anthropics/claude-code-action from 1.0.189 to 1.0.193",
+      "ref": "#30"
+    },
+    {
+      "ts": "2026-08-12 11:54",
+      "kind": "ship",
+      "line": "ci: bump anthropics/claude-code-action from 1.0.183 to 1.0.189",
+      "ref": "#29"
+    }
+  ],
+  "stories": [
+    {
+      "ref": "DEC-031",
+      "line": "The TDD cadence was reversed: DEC-022's impl-first premise was refuted, and the test gate moved to pre-push."
+    },
+    {
+      "ref": "DEC-037",
+      "line": "The accessibility gate redesigned the brand twice before the palette passed AA."
+    },
+    {
+      "ref": "DEC-044",
+      "line": "test-author committed on its own initiative once, so it was stripped to author-only — enforced by a hook with its own regression test."
+    }
+  ],
+  "metrics": [
+    {
+      "label": "locked decisions",
+      "value": "48",
+      "unit": "append-only log",
+      "source": "decisions/INDEX.md",
+      "asof": "2026-09-12",
+      "load_bearing": true
+    }
+  ],
+  "cobrain": {
+    "repo": "Portfolio",
+    "floor_tok": 10700,
+    "router_rows": 16,
+    "trigger_pass": "10/10",
+    "validation": "PASS",
+    "resident_tok": 5581,
+    "files_mapped": 34,
+    "events": 1,
+    "sessions": 1,
+    "leases": "1 · all released",
+    "sidecar_rows": 0
+  },
+  "caveats": []
+}

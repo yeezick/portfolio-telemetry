@@ -1,0 +1,8 @@
+{"ts": "2026-08-12 11:54", "kind": "ship", "line": "ci: bump anthropics/claude-code-action from 1.0.183 to 1.0.189", "ref": "#29"}
+{"ts": "2026-08-19 11:57", "kind": "ship", "line": "ci: bump anthropics/claude-code-action from 1.0.189 to 1.0.193", "ref": "#30"}
+{"ts": "2026-08-26 11:55", "kind": "ship", "line": "ci: bump anthropics/claude-code-action from 1.0.193 to 1.0.201", "ref": "#31"}
+{"ts": "2026-08-30 04:38", "kind": "ship", "line": "fix(content): 2026-08-21 integrity corrections + staged resignation copy flip", "ref": "#23"}
+{"ts": "2026-08-30 05:32", "kind": "ship", "line": "feat(work): internalize the Build Record and the Ambito dossier", "ref": "#32"}
+{"ts": "2026-09-02 11:55", "kind": "ship", "line": "ci: bump anthropics/claude-code-action from 1.0.201 to 1.0.210", "ref": "#33"}
+{"ts": "2026-09-09 11:55", "kind": "ship", "line": "ci: bump anthropics/claude-code-action from 1.0.210 to 1.0.217", "ref": "#34"}
+{"ts": "2026-09-12 08:03", "kind": "ship", "line": "feat(systems): the Systems Monitor, Phase 1", "ref": "#35"}

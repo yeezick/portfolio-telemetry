@@ -1,0 +1,386 @@
+{
+  "schema": 1,
+  "project": "career-ops",
+  "name": "career-ops",
+  "generated_at": "2026-09-13T18:18:10-05:00",
+  "emitted_by": {
+    "kind": "wrap"
+  },
+  "card": {
+    "pitch": "A local pipeline that sources and verifies job applications, and refuses to submit any it cannot prove.",
+    "chip": "Running daily · shadow mode",
+    "tone": "ember",
+    "shadow": true,
+    "caveat": "Private tooling on one machine, one operator, no deployment; the apply runner has never submitted an application — shadow mode since it was built.",
+    "since": null
+  },
+  "groups": [
+    {
+      "id": "chain-1",
+      "label": "Chain 1",
+      "detail": "daily sourcing · 05:45 · zero tokens"
+    },
+    {
+      "id": "chain-2",
+      "label": "Chain 2",
+      "detail": "apply-prep · 07:44 · cloud task · SHADOW"
+    },
+    {
+      "id": "chain-3",
+      "label": "Chain 3",
+      "detail": "content consolidation · Sun 09:00"
+    }
+  ],
+  "subsystems": [
+    {
+      "id": "scan",
+      "label": "ATS scan",
+      "group": "chain-1",
+      "kind": "stage",
+      "state": "live",
+      "detail": "40 boards",
+      "last": "2026-09-13 05:46"
+    },
+    {
+      "id": "retry",
+      "label": "retry + coverage",
+      "group": "chain-1",
+      "kind": "stage",
+      "state": "live",
+      "last": "2026-09-13 05:46"
+    },
+    {
+      "id": "score",
+      "label": "score & rank",
+      "group": "chain-1",
+      "kind": "stage",
+      "state": "live",
+      "last": "2026-09-13 05:46"
+    },
+    {
+      "id": "pool",
+      "label": "lane pool",
+      "group": "chain-1",
+      "kind": "stage",
+      "state": "live",
+      "last": "2026-09-13 05:46"
+    },
+    {
+      "id": "whats-new",
+      "label": "what's-new diff",
+      "group": "chain-1",
+      "kind": "stage",
+      "state": "live",
+      "last": "2026-09-13 05:46"
+    },
+    {
+      "id": "heartbeat",
+      "label": "staleness heartbeat",
+      "group": "chain-1",
+      "kind": "stage",
+      "state": "live",
+      "detail": "runs last",
+      "last": "2026-09-13 05:46"
+    },
+    {
+      "id": "c0",
+      "label": "C0 liveness",
+      "group": "chain-2",
+      "kind": "gate",
+      "state": "shadow",
+      "last": null
+    },
+    {
+      "id": "draft",
+      "label": "draft ⇄ verify",
+      "group": "chain-2",
+      "kind": "stage",
+      "state": "shadow",
+      "detail": "≤ 3 iterations",
+      "last": null
+    },
+    {
+      "id": "c1",
+      "label": "C1 content rules",
+      "group": "chain-2",
+      "kind": "gate",
+      "state": "shadow",
+      "detail": "20 rules",
+      "last": null
+    },
+    {
+      "id": "c2",
+      "label": "C2 form fidelity",
+      "group": "chain-2",
+      "kind": "gate",
+      "state": "shadow",
+      "last": null
+    },
+    {
+      "id": "autonomy",
+      "label": "autonomy classify",
+      "group": "chain-2",
+      "kind": "gate",
+      "state": "shadow",
+      "detail": "GREEN / AMBER / RED",
+      "last": null
+    },
+    {
+      "id": "fill",
+      "label": "fill kit",
+      "group": "chain-2",
+      "kind": "stage",
+      "state": "shadow",
+      "last": null
+    },
+    {
+      "id": "c3",
+      "label": "C3 proof",
+      "group": "chain-2",
+      "kind": "gate",
+      "state": "idle",
+      "detail": "never exercised",
+      "last": null
+    },
+    {
+      "id": "human-gate",
+      "label": "human gate",
+      "group": "chain-2",
+      "kind": "gate",
+      "state": "blocked",
+      "detail": "submit is human-only",
+      "last": null
+    },
+    {
+      "id": "mirror",
+      "label": "mirror sync",
+      "group": "chain-3",
+      "kind": "stage",
+      "state": "live",
+      "last": "2026-09-13 09:00"
+    },
+    {
+      "id": "dedup",
+      "label": "dedup + append",
+      "group": "chain-3",
+      "kind": "stage",
+      "state": "live",
+      "last": "2026-09-13 09:00"
+    }
+  ],
+  "rings": [
+    {
+      "label": "topology",
+      "detail": "three chains joined only by file writes — no broker, no daemon"
+    }
+  ],
+  "state_machines": [
+    {
+      "label": "Per-candidate state",
+      "note": "one row, advanced by the chain that owns it",
+      "states": [
+        "sourced",
+        "liveness_ok",
+        "drafted",
+        "verified",
+        "filled",
+        "fidelity_ok",
+        "submitting",
+        "submitted",
+        "recorded"
+      ]
+    }
+  ],
+  "services": [],
+  "slots": {
+    "agents": [
+      {
+        "label": "draft agent",
+        "detail": "allowlist-only"
+      },
+      {
+        "label": "verify red-team",
+        "detail": "sees only the draft + denylist"
+      },
+      {
+        "label": "cloud apply-prep runner",
+        "detail": "never submits"
+      },
+      {
+        "label": "adversarial reviewer",
+        "detail": "KILL or DOWNGRADE · ≤ 2 loops"
+      }
+    ],
+    "workflows": [
+      {
+        "label": "morning chain wrapper",
+        "detail": "fail-fast vs soft stages"
+      },
+      {
+        "label": "two-surface loop",
+        "detail": "handoff.md ⇄ code-sync.md"
+      },
+      {
+        "label": "ingest + backfill",
+        "detail": "6 phases · recursive review"
+      },
+      {
+        "label": "kickoff library",
+        "detail": "supersede, never delete"
+      },
+      {
+        "label": "command registry",
+        "detail": "8 commands · printed at boot"
+      }
+    ],
+    "skills": [
+      {
+        "label": "voice-integrity",
+        "detail": "the single operating contract"
+      },
+      {
+        "label": "nightly-apply",
+        "detail": "7 nevers"
+      },
+      {
+        "label": "hm-lens",
+        "detail": "CLEARED / SWING / OUT"
+      }
+    ],
+    "gates": [
+      {
+        "label": "claim denylist",
+        "detail": "32 forbidden / 21 sanctioned"
+      },
+      {
+        "label": "verify-core",
+        "detail": "9 forbidden + 10 voice rules"
+      },
+      {
+        "label": "autonomy classifier",
+        "detail": "13 GREEN predicates · 12 RED reasons · fails closed"
+      },
+      {
+        "label": "fidelity diff",
+        "detail": "live form vs canonical"
+      },
+      {
+        "label": "evidence ledger",
+        "detail": "12 graded blocks"
+      },
+      {
+        "label": "AI-tell rulebook",
+        "detail": "14 categories"
+      },
+      {
+        "label": "guardrails suite",
+        "detail": "the test is the rail"
+      },
+      {
+        "label": "staleness warners ×2"
+      }
+    ]
+  },
+  "schedules": [
+    {
+      "id": "morning",
+      "runner": "launchd",
+      "cadence": "morning chain · daily 05:45 CT",
+      "tz": "America/Chicago",
+      "mode": "14/14 clean",
+      "last": "2026-09-13 05:46",
+      "rc": 0
+    },
+    {
+      "id": "apply-prep",
+      "runner": "cloud task",
+      "cadence": "apply-prep · daily 07:44 CT",
+      "tz": "America/Chicago",
+      "mode": "SHADOW",
+      "last": null
+    },
+    {
+      "id": "mirror",
+      "runner": "launchd",
+      "cadence": "content mirror · Sun 09:00 CT",
+      "tz": "America/Chicago",
+      "last": "2026-09-13 09:00",
+      "rc": 0
+    }
+  ],
+  "last_significant": {
+    "ts": "2026-09-13 09:00",
+    "kind": "run",
+    "line": "mirror · rc 0",
+    "ref": ""
+  },
+  "events": [
+    {
+      "ts": "2026-09-13 12:04",
+      "kind": "wrap",
+      "line": "manifest and decision sidecar regenerated",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-13 09:00",
+      "kind": "run",
+      "line": "mirror · rc 0",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-13 05:46",
+      "kind": "run",
+      "line": "morning · rc 0",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-12 05:46",
+      "kind": "run",
+      "line": "morning · rc 0",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-06 09:00",
+      "kind": "run",
+      "line": "mirror · rc 0",
+      "ref": ""
+    }
+  ],
+  "stories": [
+    {
+      "line": "Every test was green; the first real run persisted zero rows — the fixtures had pretended."
+    },
+    {
+      "line": "Three parsers each invented a different company name, so a fidelity diff was born."
+    },
+    {
+      "line": "A 20-day outage read as \"6d OK\" — stamps now record who invoked the run."
+    }
+  ],
+  "metrics": [
+    {
+      "label": "checks",
+      "value": "925",
+      "unit": "23 suites",
+      "source": "automation/test/all.mjs · live run",
+      "asof": "2026-09-13",
+      "load_bearing": true
+    }
+  ],
+  "cobrain": {
+    "repo": "career-ops",
+    "floor_tok": 75000,
+    "router_rows": 16,
+    "trigger_pass": "13/13",
+    "validation": "PASS · 1 warn",
+    "resident_tok": 9461,
+    "files_mapped": 178,
+    "events": 100,
+    "sessions": 16,
+    "leases": "16 · all released",
+    "sidecar_rows": 0
+  },
+  "caveats": [
+    "Pipeline mechanics and run health only — this bay publishes nothing about the applications themselves."
+  ]
+}

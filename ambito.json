@@ -1,0 +1,430 @@
+{
+  "schema": 1,
+  "project": "ambito",
+  "name": "Ambito",
+  "generated_at": "2026-09-13T18:18:10-05:00",
+  "emitted_by": {
+    "kind": "wrap"
+  },
+  "card": {
+    "pitch": "A knowledge-worker intelligence layer that reads a team's communications and returns decisions, commitments and open questions with citations.",
+    "chip": "Deployed prototype · staging · no external users",
+    "tone": "steel",
+    "caveat": "Staging only, one private test tenant, zero external users; three known security items are the explicit gate before any customer.",
+    "dossier": "/work/ambito",
+    "since": null
+  },
+  "groups": [
+    {
+      "id": "chain",
+      "label": "Pipeline",
+      "detail": "Postgres is the queue"
+    },
+    {
+      "id": "side",
+      "label": "Side path"
+    }
+  ],
+  "subsystems": [
+    {
+      "id": "ingest",
+      "label": "webhook ingest / backfill queue",
+      "group": "chain",
+      "kind": "worker",
+      "state": "live",
+      "last": null
+    },
+    {
+      "id": "classifier",
+      "label": "classifier",
+      "group": "chain",
+      "kind": "worker",
+      "state": "live",
+      "detail": "Haiku",
+      "last": null
+    },
+    {
+      "id": "batcher",
+      "label": "session batcher",
+      "group": "chain",
+      "kind": "worker",
+      "state": "live",
+      "detail": "chat only",
+      "last": null
+    },
+    {
+      "id": "extractor",
+      "label": "extractor",
+      "group": "chain",
+      "kind": "worker",
+      "state": "live",
+      "detail": "Sonnet",
+      "last": null
+    },
+    {
+      "id": "escalator",
+      "label": "escalator",
+      "group": "chain",
+      "kind": "worker",
+      "state": "live",
+      "detail": "Sonnet · only if confidence < 0.70",
+      "last": null
+    },
+    {
+      "id": "persister",
+      "label": "persister + embeddings",
+      "group": "chain",
+      "kind": "worker",
+      "state": "live",
+      "detail": "voyage-3.5",
+      "last": null
+    },
+    {
+      "id": "hierarchy",
+      "label": "hierarchy resolver",
+      "group": "chain",
+      "kind": "stage",
+      "state": "idle",
+      "detail": "Haiku judge",
+      "last": null
+    },
+    {
+      "id": "mcp",
+      "label": "MCP query · Ask",
+      "group": "chain",
+      "kind": "interface",
+      "state": "scheduled",
+      "detail": "Sonnet→Opus",
+      "last": null
+    },
+    {
+      "id": "batch-ingest",
+      "label": "batch ingest",
+      "group": "side",
+      "kind": "stage",
+      "state": "built",
+      "detail": "Message Batches · kill-switched off",
+      "last": null
+    }
+  ],
+  "rings": [
+    {
+      "label": "supervisor",
+      "detail": "18 worker loops · crash-restart · stall-exit · retry → dead-letter"
+    }
+  ],
+  "state_machines": [
+    {
+      "label": "Queue is the database",
+      "note": "row state machine · terminal failed",
+      "states": [
+        "received",
+        "classified",
+        "session_batched",
+        "extracted",
+        "escalated",
+        "persisted"
+      ],
+      "exits": [
+        "failed"
+      ]
+    }
+  ],
+  "services": [
+    {
+      "value": "9 · 4 sleeping",
+      "label": "Railway services"
+    },
+    {
+      "value": "Postgres 18 + pgvector",
+      "label": "datastore"
+    },
+    {
+      "value": "43",
+      "label": "HTTP routes"
+    },
+    {
+      "value": "2",
+      "label": "MCP tools"
+    },
+    {
+      "value": "38",
+      "label": "migrations"
+    }
+  ],
+  "slots": {
+    "agents": [
+      {
+        "label": "classifier",
+        "detail": "Haiku"
+      },
+      {
+        "label": "extractor",
+        "detail": "Sonnet"
+      },
+      {
+        "label": "escalator",
+        "detail": "Sonnet"
+      },
+      {
+        "label": "Ask synthesis",
+        "detail": "Sonnet→Opus"
+      },
+      {
+        "label": "test-author",
+        "detail": "RED test only"
+      },
+      {
+        "label": "Agent Teams router",
+        "detail": "solo / team / subagents"
+      }
+    ],
+    "workflows": [
+      {
+        "label": "handoff brief",
+        "detail": "pt.121 · staged → armed → shipped → ingested"
+      },
+      {
+        "label": "code-sync return channel"
+      },
+      {
+        "label": "session-resume baton"
+      },
+      {
+        "label": "e2e walk protocol",
+        "detail": "findings close on a live walk, not CI"
+      },
+      {
+        "label": "wrap",
+        "detail": "project → rotate → manifest → sidecar"
+      }
+    ],
+    "skills": [
+      {
+        "label": "/go",
+        "detail": "verify → simplify → PR · 3-strike breaker"
+      },
+      {
+        "label": "/verify-app"
+      },
+      {
+        "label": "cobrain-start / -wrap / -coord"
+      }
+    ],
+    "gates": [
+      {
+        "label": "6 required checks",
+        "detail": "auto-merge is the only merge path"
+      },
+      {
+        "label": "eval-grader",
+        "detail": "golden-10 ratchet"
+      },
+      {
+        "label": "pre-commit ×23",
+        "detail": "gitleaks first"
+      },
+      {
+        "label": "hooks",
+        "detail": "block-destructive · test/impl separation · task-partition guard · full-suite on Stop"
+      },
+      {
+        "label": "write-lease",
+        "detail": "handoff + code-sync"
+      },
+      {
+        "label": "Material Decision Protocol",
+        "detail": "5 tripwires"
+      },
+      {
+        "label": "promotion auto-fail ×4"
+      }
+    ]
+  },
+  "schedules": [
+    {
+      "id": "sweeps",
+      "runner": "Railway cron",
+      "cadence": "sweeps · daily 08:00 UTC",
+      "last": null
+    },
+    {
+      "id": "ci",
+      "runner": "CI",
+      "cadence": "on PR · 14 jobs / 6 required",
+      "last": null
+    },
+    {
+      "id": "branch-sweep",
+      "runner": "branch sweep",
+      "cadence": "Mon/Thu",
+      "last": null
+    },
+    {
+      "id": "digest",
+      "runner": "Cowork task",
+      "cadence": "competitive digest · Mon 09:00 CT",
+      "last": null
+    }
+  ],
+  "last_significant": {
+    "ts": "2026-09-13 20:31",
+    "kind": "ship",
+    "line": "chore(web,api): INTENT_HINTS is exhaustive by construction, the required-check list matches branch protection, and RJ-2 is answered (Brief PW Phase 4)",
+    "ref": "#278"
+  },
+  "events": [
+    {
+      "ts": "2026-09-13 20:59",
+      "kind": "wrap",
+      "line": "manifest and decision sidecar regenerated",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-13 20:31",
+      "kind": "ship",
+      "line": "chore(web,api): INTENT_HINTS is exhaustive by construction, the required-check list matches branch protection, and RJ-2 is answered (Brief PW Phase 4)",
+      "ref": "#278"
+    },
+    {
+      "ts": "2026-09-13 20:25",
+      "kind": "ship",
+      "line": "fix(web): a drawer item row is a real control, so the correction gesture is reachable from an Initiative drawer (Brief PW Phase 2)",
+      "ref": "#276"
+    },
+    {
+      "ts": "2026-09-13 20:18",
+      "kind": "ship",
+      "line": "feat(api,ingestion): live capture is registered at confirm and renewed on a fifth sweep (Brief PW Phase 3)",
+      "ref": "#277"
+    },
+    {
+      "ts": "2026-09-13 19:46",
+      "kind": "ship",
+      "line": "feat(api): the named-subject comparison is on the record, and the walk script reads both DEC-232 disjuncts (Brief PW Phase 1)",
+      "ref": "#275"
+    },
+    {
+      "ts": "2026-09-13 17:21",
+      "kind": "wrap",
+      "line": "manifest and decision sidecar regenerated",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-13 02:09",
+      "kind": "ship",
+      "line": "feat(web,api): the sibling offer arrives unchecked, with select-all and none (Brief GS Phase 5)",
+      "ref": "#274"
+    },
+    {
+      "ts": "2026-09-12 21:30",
+      "kind": "ship",
+      "line": "fix(api,ingestion): a connection under another address is visible to whoever made it (Brief GS Phase 4)",
+      "ref": "#273"
+    },
+    {
+      "ts": "2026-09-12 21:14",
+      "kind": "ship",
+      "line": "feat(api): a global ask resolves a named subject, confirms it, then pins it (Brief GS Phase 3)",
+      "ref": "#272"
+    },
+    {
+      "ts": "2026-09-12 20:36",
+      "kind": "ship",
+      "line": "feat(api,eval): every entity line names the initiative it belongs to (Brief GS Phase 2)",
+      "ref": "#271"
+    },
+    {
+      "ts": "2026-09-12 19:36",
+      "kind": "wrap",
+      "line": "manifest and decision sidecar regenerated",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-12 06:35",
+      "kind": "ship",
+      "line": "feat(eval): measure the retrieval seed before anyone changes it (Brief SEED)",
+      "ref": "#269"
+    },
+    {
+      "ts": "2026-09-12 05:11",
+      "kind": "ship",
+      "line": "fix(api,web): retrieval reads the date a source happened (Brief RET PR B)",
+      "ref": "#268"
+    },
+    {
+      "ts": "2026-09-12 04:57",
+      "kind": "ship",
+      "line": "test(backend): stage-count the retrieval path (Brief RET PR A)",
+      "ref": "#267"
+    },
+    {
+      "ts": "2026-09-12 02:17",
+      "kind": "ship",
+      "line": "feat(api,web): a topic ask sees its topic (DEC-104 Amendment A)",
+      "ref": "#266"
+    },
+    {
+      "ts": "2026-09-12 01:12",
+      "kind": "ship",
+      "line": "feat(api,web): a scoped ask sees its own subject, and says what it covered",
+      "ref": "#265"
+    },
+    {
+      "ts": "2026-09-11 20:58",
+      "kind": "ship",
+      "line": "fix(api,web): the needs band opens the node it renders under (UIF4-10)",
+      "ref": "#264"
+    },
+    {
+      "ts": "2026-09-11 20:46",
+      "kind": "ship",
+      "line": "fix(web,api): the UIF4 walk fixes — copy, provider nouns, modal semantics, dock geometry",
+      "ref": "#263"
+    },
+    {
+      "ts": "2026-09-11 06:54",
+      "kind": "ship",
+      "line": "fix(api): every rollup count matches what the expanded card renders (UIF3-4)",
+      "ref": "#262"
+    }
+  ],
+  "stories": [
+    {
+      "ref": "DEC-225",
+      "line": "The counter that lied three times."
+    },
+    {
+      "ref": "DEC-087",
+      "line": "The rule that faked compliance."
+    },
+    {
+      "ref": "DEC-151",
+      "line": "Two chats locked the same decision id. Claim-at-lock followed: 34 allocations since, zero collisions."
+    }
+  ],
+  "metrics": [
+    {
+      "label": "dated decisions",
+      "value": "229",
+      "unit": "append-only log · 12/week over 131 days",
+      "source": "decisions.md",
+      "asof": "2026-09-12",
+      "load_bearing": true
+    }
+  ],
+  "cobrain": {
+    "repo": "Ambito",
+    "floor_tok": 125000,
+    "router_rows": 16,
+    "trigger_pass": "8/8",
+    "validation": "PASS · 2 warn",
+    "resident_tok": 10398,
+    "files_mapped": 128,
+    "events": 467,
+    "sessions": 65,
+    "leases": "12 · all released",
+    "sidecar_rows": 232
+  },
+  "caveats": []
+}

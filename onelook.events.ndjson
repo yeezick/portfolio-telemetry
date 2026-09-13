@@ -1,0 +1,13 @@
+{"ts": "2026-07-11", "kind": "decision", "line": "Supabase new API-key adoption + verify_jwt=false on client edge functions", "ref": "DEC-037"}
+{"ts": "2026-07-12", "kind": "decision", "line": "Token vocabulary expanded to match validated implementation (amends DEC-031)", "ref": "DEC-038"}
+{"ts": "2026-07-31", "kind": "decision", "line": "Token inventory completed to full app coverage + zero-normalization Home migration (extends DEC-038)", "ref": "DEC-039"}
+{"ts": "2026-08-01 15:19", "kind": "ship", "line": "refactor(habits): replace hardcoded fonts with design tokens in NewIdentityModal", "ref": "#23"}
+{"ts": "2026-08-01 15:33", "kind": "ship", "line": "refactor(habits): migrate OverviewHabitsView fonts to design tokens + add AppEmojiSize.pt16", "ref": "#24"}
+{"ts": "2026-08-21", "kind": "decision", "line": "Habits + Onboarding Views migrated to design tokens value-equivalently (completes screen migration except Tasks; extends DEC-039)", "ref": "DEC-040"}
+{"ts": "2026-08-21 06:03", "kind": "ship", "line": "refactor(onboarding): migrate remaining Onboarding fonts to design tokens (Confirmation + IntroCarousel)", "ref": "#26"}
+{"ts": "2026-08-21 06:24", "kind": "ship", "line": "refactor(onboarding): migrate OnboardingDemoViews fonts to design tokens", "ref": "#25"}
+{"ts": "2026-08-21 07:09", "kind": "ship", "line": "refactor(quickadd): migrate QuickAddCaptureSheet fonts to design tokens", "ref": "#27"}
+{"ts": "2026-08-24", "kind": "decision", "line": "QuickAdd + TaskRow migrated to design tokens; receiver-based token-family rule + numeric-literal audit detector locked as standing convention…", "ref": "DEC-041"}
+{"ts": "2026-08-24 20:50", "kind": "ship", "line": "refactor(quickadd): migrate QuickAddFAB font to design token", "ref": "#28"}
+{"ts": "2026-08-24 21:07", "kind": "ship", "line": "refactor(tasks): migrate TaskRow fonts to design tokens", "ref": "#29"}
+{"ts": "2026-08-24 21:11", "kind": "ship", "line": "chore(docs): mirror DEC-038..041 and lock token-family rule in build rulebook", "ref": "#30"}

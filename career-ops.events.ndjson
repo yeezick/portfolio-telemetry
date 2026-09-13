@@ -1,0 +1,5 @@
+{"ts": "2026-09-06 09:00", "kind": "run", "line": "mirror · rc 0", "ref": ""}
+{"ts": "2026-09-12 05:46", "kind": "run", "line": "morning · rc 0", "ref": ""}
+{"ts": "2026-09-13 05:46", "kind": "run", "line": "morning · rc 0", "ref": ""}
+{"ts": "2026-09-13 09:00", "kind": "run", "line": "mirror · rc 0", "ref": ""}
+{"ts": "2026-09-13 12:04", "kind": "wrap", "line": "manifest and decision sidecar regenerated", "ref": ""}
