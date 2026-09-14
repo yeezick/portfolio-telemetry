@@ -8,3 +8,5 @@
 {"ts": "2026-09-12 08:03", "kind": "ship", "line": "feat(systems): the Systems Monitor, Phase 1", "ref": "#35"}
 {"ts": "2026-09-14 00:06", "kind": "state", "line": "a rejected payload now gets its own badge, not a stale one", "ref": ""}
 {"ts": "2026-09-14 00:06", "kind": "wrap", "line": "manifest and decision sidecar regenerated", "ref": ""}
+{"ts": "2026-09-14 00:07", "kind": "wrap", "line": "manifest and decision sidecar regenerated", "ref": ""}
+{"ts": "2026-09-14 11:25", "kind": "ship", "line": "feat(systems): live telemetry loader with ISR and a signed revalidate webhook", "ref": "#36"}

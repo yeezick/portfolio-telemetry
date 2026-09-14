@@ -17,3 +17,4 @@
 {"ts": "2026-09-13 20:31", "kind": "ship", "line": "chore(web,api): INTENT_HINTS is exhaustive by construction, the required-check list matches branch protection, and RJ-2 is answered (Brief PW Phase 4)", "ref": "#278"}
 {"ts": "2026-09-13 20:59", "kind": "wrap", "line": "manifest and decision sidecar regenerated", "ref": ""}
 {"ts": "2026-09-13 17:21", "kind": "wrap", "line": "manifest and decision sidecar regenerated", "ref": ""}
+{"ts": "2026-09-14 11:36", "kind": "wrap", "line": "manifest and decision sidecar regenerated", "ref": ""}

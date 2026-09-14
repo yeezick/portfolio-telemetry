@@ -2,9 +2,9 @@
   "schema": 1,
   "project": "portfolio",
   "name": "Portfolio pipeline",
-  "generated_at": "2026-09-14T05:07:08+00:00",
+  "generated_at": "2026-09-14T13:48:28-05:00",
   "emitted_by": {
-    "kind": "wrap"
+    "kind": "hook"
   },
   "card": {
     "pitch": "The build system behind this site: a planning session writes the brief, a coding agent owns the code, a failing test written first is the only way anything merges.",
@@ -213,12 +213,24 @@
     }
   ],
   "last_significant": {
-    "ts": "2026-09-12 08:03",
+    "ts": "2026-09-14 11:25",
     "kind": "ship",
-    "line": "feat(systems): the Systems Monitor, Phase 1",
-    "ref": "#35"
+    "line": "feat(systems): live telemetry loader with ISR and a signed revalidate webhook",
+    "ref": "#36"
   },
   "events": [
+    {
+      "ts": "2026-09-14 11:25",
+      "kind": "ship",
+      "line": "feat(systems): live telemetry loader with ISR and a signed revalidate webhook",
+      "ref": "#36"
+    },
+    {
+      "ts": "2026-09-14 00:07",
+      "kind": "wrap",
+      "line": "manifest and decision sidecar regenerated",
+      "ref": ""
+    },
     {
       "ts": "2026-09-14 00:06",
       "kind": "wrap",
@@ -309,7 +321,7 @@
     "floor_tok": 10700,
     "router_rows": 16,
     "trigger_pass": "10/10",
-    "validation": "BLOCKED",
+    "validation": "PASS",
     "resident_tok": 5542,
     "files_mapped": 34,
     "events": 2,
