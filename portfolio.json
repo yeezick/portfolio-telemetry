@@ -2,9 +2,9 @@
   "schema": 1,
   "project": "portfolio",
   "name": "Portfolio pipeline",
-  "generated_at": "2026-09-14T13:48:28-05:00",
+  "generated_at": "2026-09-14T16:51:08-05:00",
   "emitted_by": {
-    "kind": "hook"
+    "kind": "wrap"
   },
   "card": {
     "pitch": "The build system behind this site: a planning session writes the brief, a coding agent owns the code, a failing test written first is the only way anything merges.",
