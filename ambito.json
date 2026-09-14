@@ -2,9 +2,9 @@
   "schema": 1,
   "project": "ambito",
   "name": "Ambito",
-  "generated_at": "2026-09-13T18:18:10-05:00",
+  "generated_at": "2026-09-13T23:00:04-05:00",
   "emitted_by": {
-    "kind": "wrap"
+    "kind": "hook"
   },
   "card": {
     "pitch": "A knowledge-worker intelligence layer that reads a team's communications and returns decisions, commitments and open questions with citations.",

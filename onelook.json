@@ -2,9 +2,9 @@
   "schema": 1,
   "project": "onelook",
   "name": "OneLook",
-  "generated_at": "2026-09-13T18:18:10-05:00",
+  "generated_at": "2026-09-13T23:00:05-05:00",
   "emitted_by": {
-    "kind": "wrap"
+    "kind": "hook"
   },
   "card": {
     "pitch": "iOS productivity app built by dispatched coding agents, gated by CI, with every decision locked in an append-only log.",

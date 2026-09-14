@@ -2,9 +2,9 @@
   "schema": 1,
   "project": "career-ops",
   "name": "career-ops",
-  "generated_at": "2026-09-13T22:39:49-05:00",
+  "generated_at": "2026-09-13T23:00:04-05:00",
   "emitted_by": {
-    "kind": "chain"
+    "kind": "hook"
   },
   "card": {
     "pitch": "A local pipeline that sources and verifies job applications, and refuses to submit any it cannot prove.",
@@ -37,50 +37,50 @@
       "label": "ATS scan",
       "group": "chain-1",
       "kind": "stage",
-      "state": "scheduled",
+      "state": "live",
       "detail": "40 boards",
-      "last": "2026-09-13 22:38"
+      "last": "2026-09-13 22:39"
     },
     {
       "id": "retry",
       "label": "retry + coverage",
       "group": "chain-1",
       "kind": "stage",
-      "state": "scheduled",
-      "last": "2026-09-13 22:38"
+      "state": "live",
+      "last": "2026-09-13 22:39"
     },
     {
       "id": "score",
       "label": "score & rank",
       "group": "chain-1",
       "kind": "stage",
-      "state": "scheduled",
-      "last": "2026-09-13 22:38"
+      "state": "live",
+      "last": "2026-09-13 22:39"
     },
     {
       "id": "pool",
       "label": "lane pool",
       "group": "chain-1",
       "kind": "stage",
-      "state": "scheduled",
-      "last": "2026-09-13 22:38"
+      "state": "live",
+      "last": "2026-09-13 22:39"
     },
     {
       "id": "whats-new",
       "label": "what's-new diff",
       "group": "chain-1",
       "kind": "stage",
-      "state": "scheduled",
-      "last": "2026-09-13 22:38"
+      "state": "live",
+      "last": "2026-09-13 22:39"
     },
     {
       "id": "heartbeat",
       "label": "staleness heartbeat",
       "group": "chain-1",
       "kind": "stage",
-      "state": "scheduled",
+      "state": "live",
       "detail": "runs last",
-      "last": "2026-09-13 22:38"
+      "last": "2026-09-13 22:39"
     },
     {
       "id": "c0",
@@ -287,8 +287,9 @@
       "runner": "launchd",
       "cadence": "morning chain · daily 05:45 CT",
       "tz": "America/Chicago",
-      "mode": "in progress",
-      "last": "2026-09-13 22:38"
+      "mode": "14/14 clean",
+      "last": "2026-09-13 22:39",
+      "rc": 0
     },
     {
       "id": "apply-prep",
@@ -308,20 +309,32 @@
     }
   ],
   "last_significant": {
-    "ts": "2026-09-14 00:51",
+    "ts": "2026-09-13 19:51",
     "kind": "state",
     "line": "a second role lane now sources by title alongside the primary one",
     "ref": ""
   },
   "events": [
     {
-      "ts": "2026-09-14 00:51",
+      "ts": "2026-09-13 22:56",
+      "kind": "wrap",
+      "line": "manifest and decision sidecar regenerated",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-13 22:39",
+      "kind": "run",
+      "line": "morning · rc 0",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-13 19:51",
       "kind": "state",
       "line": "a second role lane now sources by title alongside the primary one",
       "ref": ""
     },
     {
-      "ts": "2026-09-14 00:51",
+      "ts": "2026-09-13 19:51",
       "kind": "state",
       "line": "a free study track replaces a killed four-thousand-dollar course",
       "ref": ""
@@ -390,8 +403,8 @@
     "router_rows": 19,
     "trigger_pass": "13/13",
     "validation": "BLOCKED · 1 warn",
-    "resident_tok": 10129,
-    "files_mapped": 187,
+    "resident_tok": 10160,
+    "files_mapped": 188,
     "events": 100,
     "sessions": 16,
     "leases": "16 · all released",
