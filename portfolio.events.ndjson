@@ -6,3 +6,5 @@
 {"ts": "2026-09-02 11:55", "kind": "ship", "line": "ci: bump anthropics/claude-code-action from 1.0.201 to 1.0.210", "ref": "#33"}
 {"ts": "2026-09-09 11:55", "kind": "ship", "line": "ci: bump anthropics/claude-code-action from 1.0.210 to 1.0.217", "ref": "#34"}
 {"ts": "2026-09-12 08:03", "kind": "ship", "line": "feat(systems): the Systems Monitor, Phase 1", "ref": "#35"}
+{"ts": "2026-09-14 00:06", "kind": "state", "line": "a rejected payload now gets its own badge, not a stale one", "ref": ""}
+{"ts": "2026-09-14 00:06", "kind": "wrap", "line": "manifest and decision sidecar regenerated", "ref": ""}

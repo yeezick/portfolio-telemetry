@@ -2,9 +2,9 @@
   "schema": 1,
   "project": "portfolio",
   "name": "Portfolio pipeline",
-  "generated_at": "2026-09-13T23:00:05-05:00",
+  "generated_at": "2026-09-14T05:07:08+00:00",
   "emitted_by": {
-    "kind": "hook"
+    "kind": "wrap"
   },
   "card": {
     "pitch": "The build system behind this site: a planning session writes the brief, a coding agent owns the code, a failing test written first is the only way anything merges.",
@@ -220,6 +220,18 @@
   },
   "events": [
     {
+      "ts": "2026-09-14 00:06",
+      "kind": "wrap",
+      "line": "manifest and decision sidecar regenerated",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-14 00:06",
+      "kind": "state",
+      "line": "a rejected payload now gets its own badge, not a stale one",
+      "ref": ""
+    },
+    {
       "ts": "2026-09-12 08:03",
       "kind": "ship",
       "line": "feat(systems): the Systems Monitor, Phase 1",
@@ -297,11 +309,11 @@
     "floor_tok": 10700,
     "router_rows": 16,
     "trigger_pass": "10/10",
-    "validation": "PASS",
-    "resident_tok": 5581,
+    "validation": "BLOCKED",
+    "resident_tok": 5542,
     "files_mapped": 34,
-    "events": 1,
-    "sessions": 1,
+    "events": 2,
+    "sessions": 2,
     "leases": "1 · all released",
     "sidecar_rows": 0
   },

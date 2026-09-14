@@ -2,9 +2,9 @@
   "schema": 1,
   "project": "career-ops",
   "name": "career-ops",
-  "generated_at": "2026-09-13T23:00:04-05:00",
+  "generated_at": "2026-09-13T23:17:08-05:00",
   "emitted_by": {
-    "kind": "hook"
+    "kind": "chain"
   },
   "card": {
     "pitch": "A local pipeline that sources and verifies job applications, and refuses to submit any it cannot prove.",
@@ -39,7 +39,7 @@
       "kind": "stage",
       "state": "live",
       "detail": "40 boards",
-      "last": "2026-09-13 22:39"
+      "last": "2026-09-13 23:17"
     },
     {
       "id": "retry",
@@ -47,7 +47,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-13 22:39"
+      "last": "2026-09-13 23:17"
     },
     {
       "id": "score",
@@ -55,7 +55,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-13 22:39"
+      "last": "2026-09-13 23:17"
     },
     {
       "id": "pool",
@@ -63,7 +63,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-13 22:39"
+      "last": "2026-09-13 23:17"
     },
     {
       "id": "whats-new",
@@ -71,7 +71,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-13 22:39"
+      "last": "2026-09-13 23:17"
     },
     {
       "id": "heartbeat",
@@ -80,7 +80,7 @@
       "kind": "stage",
       "state": "live",
       "detail": "runs last",
-      "last": "2026-09-13 22:39"
+      "last": "2026-09-13 23:17"
     },
     {
       "id": "c0",
@@ -288,7 +288,7 @@
       "cadence": "morning chain · daily 05:45 CT",
       "tz": "America/Chicago",
       "mode": "14/14 clean",
-      "last": "2026-09-13 22:39",
+      "last": "2026-09-13 23:17",
       "rc": 0
     },
     {
@@ -315,6 +315,12 @@
     "ref": ""
   },
   "events": [
+    {
+      "ts": "2026-09-13 23:17",
+      "kind": "run",
+      "line": "morning · rc 0",
+      "ref": ""
+    },
     {
       "ts": "2026-09-13 22:56",
       "kind": "wrap",
@@ -402,7 +408,7 @@
     "floor_tok": 75000,
     "router_rows": 19,
     "trigger_pass": "13/13",
-    "validation": "BLOCKED · 1 warn",
+    "validation": "PASS · 1 warn",
     "resident_tok": 10160,
     "files_mapped": 188,
     "events": 100,
