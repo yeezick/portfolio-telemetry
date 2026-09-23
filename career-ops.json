@@ -2,9 +2,9 @@
   "schema": 1,
   "project": "career-ops",
   "name": "career-ops",
-  "generated_at": "2026-09-14T13:48:27-05:00",
+  "generated_at": "2026-09-17T05:46:13-05:00",
   "emitted_by": {
-    "kind": "hook"
+    "kind": "chain"
   },
   "card": {
     "pitch": "A local pipeline that sources and verifies job applications, and refuses to submit any it cannot prove.",
@@ -39,7 +39,7 @@
       "kind": "stage",
       "state": "live",
       "detail": "40 boards",
-      "last": "2026-09-14 05:46"
+      "last": "2026-09-17 05:46"
     },
     {
       "id": "retry",
@@ -47,7 +47,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-14 05:46"
+      "last": "2026-09-17 05:46"
     },
     {
       "id": "score",
@@ -55,7 +55,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-14 05:46"
+      "last": "2026-09-17 05:46"
     },
     {
       "id": "pool",
@@ -63,7 +63,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-14 05:46"
+      "last": "2026-09-17 05:46"
     },
     {
       "id": "whats-new",
@@ -71,7 +71,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-14 05:46"
+      "last": "2026-09-17 05:46"
     },
     {
       "id": "heartbeat",
@@ -80,7 +80,7 @@
       "kind": "stage",
       "state": "live",
       "detail": "runs last",
-      "last": "2026-09-14 05:46"
+      "last": "2026-09-17 05:46"
     },
     {
       "id": "c0",
@@ -288,7 +288,7 @@
       "cadence": "morning chain · daily 05:45 CT",
       "tz": "America/Chicago",
       "mode": "14/14 clean",
-      "last": "2026-09-14 05:46",
+      "last": "2026-09-17 05:46",
       "rc": 0
     },
     {
@@ -309,12 +309,54 @@
     }
   ],
   "last_significant": {
-    "ts": "2026-09-13 19:51",
+    "ts": "2026-09-15 18:20",
     "kind": "state",
-    "line": "a second role lane now sources by title alongside the primary one",
+    "line": "daily inbox reconcile now updates records with email provenance",
     "ref": ""
   },
   "events": [
+    {
+      "ts": "2026-09-17 05:46",
+      "kind": "run",
+      "line": "morning · rc 0",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-16 23:57",
+      "kind": "wrap",
+      "line": "manifest and decision sidecar regenerated",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-16 05:46",
+      "kind": "run",
+      "line": "morning · rc 0",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-15 19:51",
+      "kind": "wrap",
+      "line": "manifest and decision sidecar regenerated",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-15 18:20",
+      "kind": "state",
+      "line": "daily inbox reconcile now updates records with email provenance",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-15 05:46",
+      "kind": "run",
+      "line": "morning · rc 0",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-14 18:32",
+      "kind": "wrap",
+      "line": "manifest and decision sidecar regenerated",
+      "ref": ""
+    },
     {
       "ts": "2026-09-14 06:57",
       "kind": "wrap",
@@ -392,12 +434,6 @@
       "kind": "run",
       "line": "morning · rc 0",
       "ref": ""
-    },
-    {
-      "ts": "2026-09-06 09:00",
-      "kind": "run",
-      "line": "mirror · rc 0",
-      "ref": ""
     }
   ],
   "stories": [
@@ -417,18 +453,18 @@
       "value": "925",
       "unit": "23 suites",
       "source": "automation/test/all.mjs · live run",
-      "asof": "2026-09-14",
+      "asof": "2026-09-17",
       "load_bearing": true
     }
   ],
   "cobrain": {
     "repo": "career-ops",
     "floor_tok": 75000,
-    "router_rows": 19,
+    "router_rows": 21,
     "trigger_pass": "13/13",
     "validation": "PASS · 1 warn",
-    "resident_tok": 10222,
-    "files_mapped": 190,
+    "resident_tok": 11354,
+    "files_mapped": 214,
     "events": 100,
     "sessions": 16,
     "leases": "16 · all released",
