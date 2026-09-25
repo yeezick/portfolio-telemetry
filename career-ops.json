@@ -2,7 +2,7 @@
   "schema": 1,
   "project": "career-ops",
   "name": "career-ops",
-  "generated_at": "2026-09-24T19:09:47-05:00",
+  "generated_at": "2026-09-25T05:46:13-05:00",
   "emitted_by": {
     "kind": "chain"
   },
@@ -39,7 +39,7 @@
       "kind": "stage",
       "state": "live",
       "detail": "40 boards",
-      "last": "2026-09-24 19:09"
+      "last": "2026-09-25 05:46"
     },
     {
       "id": "retry",
@@ -47,7 +47,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-24 19:09"
+      "last": "2026-09-25 05:46"
     },
     {
       "id": "score",
@@ -55,7 +55,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-24 19:09"
+      "last": "2026-09-25 05:46"
     },
     {
       "id": "pool",
@@ -63,7 +63,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-24 19:09"
+      "last": "2026-09-25 05:46"
     },
     {
       "id": "whats-new",
@@ -71,7 +71,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-24 19:09"
+      "last": "2026-09-25 05:46"
     },
     {
       "id": "heartbeat",
@@ -80,7 +80,7 @@
       "kind": "stage",
       "state": "live",
       "detail": "runs last",
-      "last": "2026-09-24 19:09"
+      "last": "2026-09-25 05:46"
     },
     {
       "id": "c0",
@@ -288,7 +288,7 @@
       "cadence": "morning chain · daily 05:45 CT",
       "tz": "America/Chicago",
       "mode": "14/14 clean",
-      "last": "2026-09-24 19:09",
+      "last": "2026-09-25 05:46",
       "rc": 0
     },
     {
@@ -315,6 +315,12 @@
     "ref": ""
   },
   "events": [
+    {
+      "ts": "2026-09-25 05:46",
+      "kind": "run",
+      "line": "morning · rc 0",
+      "ref": ""
+    },
     {
       "ts": "2026-09-24 19:09",
       "kind": "run",
@@ -428,12 +434,6 @@
       "kind": "wrap",
       "line": "manifest and decision sidecar regenerated",
       "ref": ""
-    },
-    {
-      "ts": "2026-09-13 12:04",
-      "kind": "wrap",
-      "line": "manifest and decision sidecar regenerated",
-      "ref": ""
     }
   ],
   "stories": [
@@ -453,7 +453,7 @@
       "value": "925",
       "unit": "23 suites",
       "source": "automation/test/all.mjs · live run",
-      "asof": "2026-09-24",
+      "asof": "2026-09-25",
       "load_bearing": true
     }
   ],
@@ -465,7 +465,7 @@
     "validation": "BLOCKED",
     "resident_tok": 12842,
     "files_mapped": 248,
-    "events": 102,
+    "events": 104,
     "sessions": 17,
     "leases": "16 · all released",
     "sidecar_rows": 0
