@@ -2,7 +2,7 @@
   "schema": 1,
   "project": "career-ops",
   "name": "career-ops",
-  "generated_at": "2026-09-17T05:46:13-05:00",
+  "generated_at": "2026-09-24T19:09:47-05:00",
   "emitted_by": {
     "kind": "chain"
   },
@@ -39,7 +39,7 @@
       "kind": "stage",
       "state": "live",
       "detail": "40 boards",
-      "last": "2026-09-17 05:46"
+      "last": "2026-09-24 19:09"
     },
     {
       "id": "retry",
@@ -47,7 +47,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-17 05:46"
+      "last": "2026-09-24 19:09"
     },
     {
       "id": "score",
@@ -55,7 +55,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-17 05:46"
+      "last": "2026-09-24 19:09"
     },
     {
       "id": "pool",
@@ -63,7 +63,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-17 05:46"
+      "last": "2026-09-24 19:09"
     },
     {
       "id": "whats-new",
@@ -71,7 +71,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-17 05:46"
+      "last": "2026-09-24 19:09"
     },
     {
       "id": "heartbeat",
@@ -80,7 +80,7 @@
       "kind": "stage",
       "state": "live",
       "detail": "runs last",
-      "last": "2026-09-17 05:46"
+      "last": "2026-09-24 19:09"
     },
     {
       "id": "c0",
@@ -157,7 +157,7 @@
       "group": "chain-3",
       "kind": "stage",
       "state": "scheduled",
-      "last": "2026-09-13 09:00"
+      "last": "2026-09-20 09:00"
     },
     {
       "id": "dedup",
@@ -165,7 +165,7 @@
       "group": "chain-3",
       "kind": "stage",
       "state": "scheduled",
-      "last": "2026-09-13 09:00"
+      "last": "2026-09-20 09:00"
     }
   ],
   "rings": [
@@ -288,7 +288,7 @@
       "cadence": "morning chain · daily 05:45 CT",
       "tz": "America/Chicago",
       "mode": "14/14 clean",
-      "last": "2026-09-17 05:46",
+      "last": "2026-09-24 19:09",
       "rc": 0
     },
     {
@@ -304,7 +304,7 @@
       "runner": "launchd",
       "cadence": "content mirror · Sun 09:00 CT",
       "tz": "America/Chicago",
-      "last": "2026-09-13 09:00",
+      "last": "2026-09-20 09:00",
       "rc": 0
     }
   ],
@@ -315,6 +315,24 @@
     "ref": ""
   },
   "events": [
+    {
+      "ts": "2026-09-24 19:09",
+      "kind": "run",
+      "line": "morning · rc 0",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-24 15:31",
+      "kind": "wrap",
+      "line": "manifest and decision sidecar regenerated",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-20 09:00",
+      "kind": "run",
+      "line": "mirror · rc 0",
+      "ref": ""
+    },
     {
       "ts": "2026-09-17 05:46",
       "kind": "run",
@@ -416,24 +434,6 @@
       "kind": "wrap",
       "line": "manifest and decision sidecar regenerated",
       "ref": ""
-    },
-    {
-      "ts": "2026-09-13 09:00",
-      "kind": "run",
-      "line": "mirror · rc 0",
-      "ref": ""
-    },
-    {
-      "ts": "2026-09-13 05:46",
-      "kind": "run",
-      "line": "morning · rc 0",
-      "ref": ""
-    },
-    {
-      "ts": "2026-09-12 05:46",
-      "kind": "run",
-      "line": "morning · rc 0",
-      "ref": ""
     }
   ],
   "stories": [
@@ -453,7 +453,7 @@
       "value": "925",
       "unit": "23 suites",
       "source": "automation/test/all.mjs · live run",
-      "asof": "2026-09-17",
+      "asof": "2026-09-24",
       "load_bearing": true
     }
   ],
@@ -462,11 +462,11 @@
     "floor_tok": 75000,
     "router_rows": 21,
     "trigger_pass": "13/13",
-    "validation": "PASS · 1 warn",
-    "resident_tok": 11354,
-    "files_mapped": 214,
-    "events": 100,
-    "sessions": 16,
+    "validation": "BLOCKED",
+    "resident_tok": 12842,
+    "files_mapped": 248,
+    "events": 102,
+    "sessions": 17,
     "leases": "16 · all released",
     "sidecar_rows": 0
   },
