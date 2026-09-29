@@ -2,7 +2,7 @@
   "schema": 1,
   "project": "career-ops",
   "name": "career-ops",
-  "generated_at": "2026-09-28T05:46:37-05:00",
+  "generated_at": "2026-09-29T05:46:37-05:00",
   "emitted_by": {
     "kind": "chain"
   },
@@ -39,7 +39,7 @@
       "kind": "stage",
       "state": "live",
       "detail": "40 boards",
-      "last": "2026-09-28 05:46"
+      "last": "2026-09-29 05:46"
     },
     {
       "id": "retry",
@@ -47,7 +47,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-28 05:46"
+      "last": "2026-09-29 05:46"
     },
     {
       "id": "score",
@@ -55,7 +55,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-28 05:46"
+      "last": "2026-09-29 05:46"
     },
     {
       "id": "pool",
@@ -63,7 +63,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-28 05:46"
+      "last": "2026-09-29 05:46"
     },
     {
       "id": "whats-new",
@@ -71,7 +71,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-09-28 05:46"
+      "last": "2026-09-29 05:46"
     },
     {
       "id": "heartbeat",
@@ -80,7 +80,7 @@
       "kind": "stage",
       "state": "live",
       "detail": "runs last",
-      "last": "2026-09-28 05:46"
+      "last": "2026-09-29 05:46"
     },
     {
       "id": "c0",
@@ -156,7 +156,7 @@
       "label": "mirror sync",
       "group": "chain-3",
       "kind": "stage",
-      "state": "live",
+      "state": "scheduled",
       "last": "2026-09-27 09:00"
     },
     {
@@ -164,7 +164,7 @@
       "label": "dedup + append",
       "group": "chain-3",
       "kind": "stage",
-      "state": "live",
+      "state": "scheduled",
       "last": "2026-09-27 09:00"
     }
   ],
@@ -288,7 +288,7 @@
       "cadence": "morning chain · daily 05:45 CT",
       "tz": "America/Chicago",
       "mode": "14/14 clean",
-      "last": "2026-09-28 05:46",
+      "last": "2026-09-29 05:46",
       "rc": 0
     },
     {
@@ -309,12 +309,30 @@
     }
   ],
   "last_significant": {
-    "ts": "2026-09-15 18:20",
+    "ts": "2026-09-28 19:42",
     "kind": "state",
-    "line": "daily inbox reconcile now updates records with email provenance",
+    "line": "a first hospitality offer lands and onboarding completes",
     "ref": ""
   },
   "events": [
+    {
+      "ts": "2026-09-29 05:46",
+      "kind": "run",
+      "line": "morning · rc 0",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-28 22:01",
+      "kind": "wrap",
+      "line": "manifest and decision sidecar regenerated",
+      "ref": ""
+    },
+    {
+      "ts": "2026-09-28 19:42",
+      "kind": "state",
+      "line": "a first hospitality offer lands and onboarding completes",
+      "ref": ""
+    },
     {
       "ts": "2026-09-28 05:46",
       "kind": "run",
@@ -416,24 +434,6 @@
       "kind": "run",
       "line": "morning · rc 0",
       "ref": ""
-    },
-    {
-      "ts": "2026-09-14 18:32",
-      "kind": "wrap",
-      "line": "manifest and decision sidecar regenerated",
-      "ref": ""
-    },
-    {
-      "ts": "2026-09-14 06:57",
-      "kind": "wrap",
-      "line": "manifest and decision sidecar regenerated",
-      "ref": ""
-    },
-    {
-      "ts": "2026-09-14 05:46",
-      "kind": "run",
-      "line": "morning · rc 0",
-      "ref": ""
     }
   ],
   "stories": [
@@ -453,7 +453,7 @@
       "value": "925",
       "unit": "23 suites",
       "source": "automation/test/all.mjs · live run",
-      "asof": "2026-09-28",
+      "asof": "2026-09-29",
       "load_bearing": true
     }
   ],
@@ -463,8 +463,8 @@
     "router_rows": 21,
     "trigger_pass": "13/13",
     "validation": "BLOCKED",
-    "resident_tok": 13161,
-    "files_mapped": 254,
+    "resident_tok": 13364,
+    "files_mapped": 259,
     "events": 104,
     "sessions": 17,
     "leases": "16 · all released",
