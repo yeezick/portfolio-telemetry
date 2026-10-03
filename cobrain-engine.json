@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "generated_at": "2026-10-03T10:52:36-05:00",
+  "version": "0.3.0",
+  "skills": 4,
+  "scripts": 17,
+  "dependencies": 0,
+  "decisions": 83,
+  "checks": 9,
+  "live_since": "2026-06-19",
+  "engine_versions": 1
+}
