@@ -2,9 +2,9 @@
   "schema": 1,
   "project": "portfolio",
   "name": "Portfolio pipeline",
-  "generated_at": "2026-09-14T16:51:08-05:00",
+  "generated_at": "2026-10-03T14:09:05-05:00",
   "emitted_by": {
-    "kind": "wrap"
+    "kind": "manual"
   },
   "card": {
     "pitch": "The build system behind this site: a planning session writes the brief, a coding agent owns the code, a failing test written first is the only way anything merges.",
@@ -213,12 +213,66 @@
     }
   ],
   "last_significant": {
-    "ts": "2026-09-14 11:25",
+    "ts": "2026-10-03 13:52",
     "kind": "ship",
-    "line": "feat(systems): live telemetry loader with ISR and a signed revalidate webhook",
-    "ref": "#36"
+    "line": "feat(monitor): add the manual emitter kind, drop emitted_by.session (Task N)",
+    "ref": "#51"
   },
   "events": [
+    {
+      "ts": "2026-10-03 13:52",
+      "kind": "ship",
+      "line": "feat(monitor): add the manual emitter kind, drop emitted_by.session (Task N)",
+      "ref": "#51"
+    },
+    {
+      "ts": "2026-10-03 13:45",
+      "kind": "ship",
+      "line": "fix(copy): demote the orchestrator and drop its line count (Task O)",
+      "ref": "#50"
+    },
+    {
+      "ts": "2026-10-03 13:38",
+      "kind": "ship",
+      "line": "fix(deps): bump next to 16.3.8 for the next/og RCE advisory",
+      "ref": "#49"
+    },
+    {
+      "ts": "2026-10-03 13:17",
+      "kind": "ship",
+      "line": "chore: housekeeping 2026-10-03 (Task M)",
+      "ref": "#48"
+    },
+    {
+      "ts": "2026-10-03 12:19",
+      "kind": "wrap",
+      "line": "manifest and decision sidecar regenerated",
+      "ref": ""
+    },
+    {
+      "ts": "2026-10-03 10:53",
+      "kind": "ship",
+      "line": "feat(systems): label the Engine panel when it shows the committed snapshot",
+      "ref": "#47"
+    },
+    {
+      "ts": "2026-10-03 09:55",
+      "kind": "ship",
+      "line": "test(e2e): make the e2e gate trustworthy (idempotent retraction, fail on flaky)",
+      "ref": "#46"
+    },
+    {
+      "ts": "2026-10-03 09:21",
+      "kind": "ship",
+      "line": "ci: run the full Playwright suite as a required E2E + a11y check",
+      "ref": "#45"
+    },
+    {
+      "ts": "2026-10-03 07:48",
+      "kind": "ship",
+      "line": "feat: server-render /claude notes; derive /systems CoBrain counts from live data",
+      "ref": "#44"
+    },
     {
       "ts": "2026-09-14 11:25",
       "kind": "ship",
@@ -284,12 +338,6 @@
       "kind": "ship",
       "line": "ci: bump anthropics/claude-code-action from 1.0.189 to 1.0.193",
       "ref": "#30"
-    },
-    {
-      "ts": "2026-08-12 11:54",
-      "kind": "ship",
-      "line": "ci: bump anthropics/claude-code-action from 1.0.183 to 1.0.189",
-      "ref": "#29"
     }
   ],
   "stories": [
@@ -319,14 +367,14 @@
   "cobrain": {
     "repo": "Portfolio",
     "floor_tok": 10700,
-    "router_rows": 16,
+    "router_rows": 18,
     "trigger_pass": "10/10",
     "validation": "PASS",
-    "resident_tok": 5542,
-    "files_mapped": 34,
-    "events": 2,
-    "sessions": 2,
-    "leases": "1 · all released",
+    "resident_tok": 6868,
+    "files_mapped": 39,
+    "events": 4,
+    "sessions": 9,
+    "leases": "15 · all released",
     "sidecar_rows": 0
   },
   "caveats": []

@@ -2,9 +2,9 @@
   "schema": 1,
   "project": "onelook",
   "name": "OneLook",
-  "generated_at": "2026-09-14T13:48:28-05:00",
+  "generated_at": "2026-10-03T14:09:05-05:00",
   "emitted_by": {
-    "kind": "hook"
+    "kind": "manual"
   },
   "card": {
     "pitch": "iOS productivity app built by dispatched coding agents, gated by CI, with every decision locked in an append-only log.",
@@ -251,12 +251,30 @@
     }
   ],
   "last_significant": {
-    "ts": "2026-08-24",
-    "kind": "decision",
-    "line": "QuickAdd + TaskRow migrated to design tokens; receiver-based token-family rule + numeric-literal audit detector locked as standing convention…",
-    "ref": "DEC-041"
+    "ts": "2026-10-03 13:28",
+    "kind": "ship",
+    "line": "feat(habits): monthly habit tracker (Overview tab)",
+    "ref": "#31"
   },
   "events": [
+    {
+      "ts": "2026-10-03 14:09",
+      "kind": "dispatch",
+      "line": "AWAITING_COMMIT",
+      "ref": ""
+    },
+    {
+      "ts": "2026-10-03 13:28",
+      "kind": "ship",
+      "line": "feat(habits): monthly habit tracker (Overview tab)",
+      "ref": "#31"
+    },
+    {
+      "ts": "2026-10-03 06:51",
+      "kind": "wrap",
+      "line": "manifest and decision sidecar regenerated",
+      "ref": ""
+    },
     {
       "ts": "2026-08-24 21:11",
       "kind": "ship",
@@ -374,11 +392,11 @@
     "floor_tok": 48000,
     "router_rows": 16,
     "trigger_pass": "10/10",
-    "validation": "PASS · 1 warn",
-    "resident_tok": 7087,
-    "files_mapped": 41,
+    "validation": "PASS",
+    "resident_tok": 7503,
+    "files_mapped": 42,
     "events": 1,
-    "sessions": 18,
+    "sessions": 21,
     "leases": "4 · all released",
     "sidecar_rows": 41
   },

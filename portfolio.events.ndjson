@@ -10,3 +10,12 @@
 {"ts": "2026-09-14 00:06", "kind": "wrap", "line": "manifest and decision sidecar regenerated", "ref": ""}
 {"ts": "2026-09-14 00:07", "kind": "wrap", "line": "manifest and decision sidecar regenerated", "ref": ""}
 {"ts": "2026-09-14 11:25", "kind": "ship", "line": "feat(systems): live telemetry loader with ISR and a signed revalidate webhook", "ref": "#36"}
+{"ts": "2026-10-03 07:48", "kind": "ship", "line": "feat: server-render /claude notes; derive /systems CoBrain counts from live data", "ref": "#44"}
+{"ts": "2026-10-03 09:21", "kind": "ship", "line": "ci: run the full Playwright suite as a required E2E + a11y check", "ref": "#45"}
+{"ts": "2026-10-03 09:55", "kind": "ship", "line": "test(e2e): make the e2e gate trustworthy (idempotent retraction, fail on flaky)", "ref": "#46"}
+{"ts": "2026-10-03 10:53", "kind": "ship", "line": "feat(systems): label the Engine panel when it shows the committed snapshot", "ref": "#47"}
+{"ts": "2026-10-03 12:19", "kind": "wrap", "line": "manifest and decision sidecar regenerated", "ref": ""}
+{"ts": "2026-10-03 13:17", "kind": "ship", "line": "chore: housekeeping 2026-10-03 (Task M)", "ref": "#48"}
+{"ts": "2026-10-03 13:38", "kind": "ship", "line": "fix(deps): bump next to 16.3.8 for the next/og RCE advisory", "ref": "#49"}
+{"ts": "2026-10-03 13:45", "kind": "ship", "line": "fix(copy): demote the orchestrator and drop its line count (Task O)", "ref": "#50"}
+{"ts": "2026-10-03 13:52", "kind": "ship", "line": "feat(monitor): add the manual emitter kind, drop emitted_by.session (Task N)", "ref": "#51"}

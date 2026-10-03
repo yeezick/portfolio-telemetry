@@ -18,3 +18,17 @@
 {"ts": "2026-09-13 20:59", "kind": "wrap", "line": "manifest and decision sidecar regenerated", "ref": ""}
 {"ts": "2026-09-13 17:21", "kind": "wrap", "line": "manifest and decision sidecar regenerated", "ref": ""}
 {"ts": "2026-09-14 11:36", "kind": "wrap", "line": "manifest and decision sidecar regenerated", "ref": ""}
+{"ts": "2026-09-17 20:50", "kind": "state", "line": "every session is scoped to the production promotion queue", "ref": ""}
+{"ts": "2026-09-20 02:02", "kind": "ship", "line": "docs(deploy): the runbook no longer tells operators to expose api and mcp (Brief RBK)", "ref": "#296"}
+{"ts": "2026-09-22 12:43", "kind": "state", "line": "a counter that reports rows cannot report discarded events", "ref": ""}
+{"ts": "2026-09-22 15:52", "kind": "ship", "line": "test(backend): reclaim dead HNSW entries so a green suite means something (Brief CIFLAKE)", "ref": "#297"}
+{"ts": "2026-09-22 16:36", "kind": "state", "line": "the last build gate cleared; a green suite now means something", "ref": ""}
+{"ts": "2026-09-22 16:53", "kind": "ship", "line": "feat(ingestion): count the duplicate-key collapse instead of preventing it (Brief COLLAPSE)", "ref": "#298"}
+{"ts": "2026-09-24 20:26", "kind": "ship", "line": "feat(demo): demo-mode guard layer, waitlist backend, and a tenant-complete ANN seed", "ref": "#299"}
+{"ts": "2026-09-25 23:49", "kind": "ship", "line": "fix(retrieval): pin the named-subject shortlist tenant-complete (Brief SEEDPIN)", "ref": "#300"}
+{"ts": "2026-09-26 00:12", "kind": "ship", "line": "feat(demo): DEMO-C: banner + Work/Home toggle, waitlist, admin tab, cap-vs-cache, marketing CTA, vendored corpus", "ref": "#301"}
+{"ts": "2026-09-28 19:37", "kind": "state", "line": "the demo is code-complete; staging setup is the next step", "ref": ""}
+{"ts": "2026-10-01 14:24", "kind": "ship", "line": "fix(deploy): route ambito-demo to the web build, unbreak next build, clear advisory wave", "ref": "#302"}
+{"ts": "2026-10-03 05:03", "kind": "ship", "line": "ci: add a required-intent TS Build (next build) job; raise pyjwt floor", "ref": "#303"}
+{"ts": "2026-10-03 08:13", "kind": "state", "line": "cross-tenant leak probe ran on three tenants with zero leaks", "ref": ""}
+{"ts": "2026-10-03 13:55", "kind": "wrap", "line": "manifest and decision sidecar regenerated", "ref": ""}

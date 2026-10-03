@@ -2,9 +2,9 @@
   "schema": 1,
   "project": "career-ops",
   "name": "career-ops",
-  "generated_at": "2026-10-03T05:46:40-05:00",
+  "generated_at": "2026-10-03T14:09:04-05:00",
   "emitted_by": {
-    "kind": "chain"
+    "kind": "manual"
   },
   "card": {
     "pitch": "A local pipeline that sources and verifies job applications, and refuses to submit any it cannot prove.",
@@ -316,6 +316,12 @@
   },
   "events": [
     {
+      "ts": "2026-10-03 10:39",
+      "kind": "wrap",
+      "line": "manifest and decision sidecar regenerated",
+      "ref": ""
+    },
+    {
       "ts": "2026-10-03 05:46",
       "kind": "run",
       "line": "morning · rc 0",
@@ -428,12 +434,6 @@
       "kind": "run",
       "line": "mirror · rc 0",
       "ref": ""
-    },
-    {
-      "ts": "2026-09-17 05:46",
-      "kind": "run",
-      "line": "morning · rc 0",
-      "ref": ""
     }
   ],
   "stories": [
@@ -463,8 +463,8 @@
     "router_rows": 21,
     "trigger_pass": "13/13",
     "validation": "PASS",
-    "resident_tok": 13424,
-    "files_mapped": 259,
+    "resident_tok": 13967,
+    "files_mapped": 262,
     "events": 108,
     "sessions": 17,
     "leases": "19 · all released",

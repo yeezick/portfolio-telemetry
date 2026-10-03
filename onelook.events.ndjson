@@ -11,3 +11,6 @@
 {"ts": "2026-08-24 20:50", "kind": "ship", "line": "refactor(quickadd): migrate QuickAddFAB font to design token", "ref": "#28"}
 {"ts": "2026-08-24 21:07", "kind": "ship", "line": "refactor(tasks): migrate TaskRow fonts to design tokens", "ref": "#29"}
 {"ts": "2026-08-24 21:11", "kind": "ship", "line": "chore(docs): mirror DEC-038..041 and lock token-family rule in build rulebook", "ref": "#30"}
+{"ts": "2026-10-03 06:51", "kind": "wrap", "line": "manifest and decision sidecar regenerated", "ref": ""}
+{"ts": "2026-10-03 13:28", "kind": "ship", "line": "feat(habits): monthly habit tracker (Overview tab)", "ref": "#31"}
+{"ts": "2026-10-03 14:09", "kind": "dispatch", "line": "AWAITING_COMMIT", "ref": ""}
