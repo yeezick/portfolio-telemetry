@@ -2,7 +2,7 @@
   "schema": 1,
   "project": "career-ops",
   "name": "career-ops",
-  "generated_at": "2026-10-04T05:46:39-05:00",
+  "generated_at": "2026-10-05T05:46:39-05:00",
   "emitted_by": {
     "kind": "chain"
   },
@@ -39,7 +39,7 @@
       "kind": "stage",
       "state": "live",
       "detail": "40 boards",
-      "last": "2026-10-04 05:46"
+      "last": "2026-10-05 05:46"
     },
     {
       "id": "retry",
@@ -47,7 +47,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-10-04 05:46"
+      "last": "2026-10-05 05:46"
     },
     {
       "id": "score",
@@ -55,7 +55,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-10-04 05:46"
+      "last": "2026-10-05 05:46"
     },
     {
       "id": "pool",
@@ -63,7 +63,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-10-04 05:46"
+      "last": "2026-10-05 05:46"
     },
     {
       "id": "whats-new",
@@ -71,7 +71,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-10-04 05:46"
+      "last": "2026-10-05 05:46"
     },
     {
       "id": "heartbeat",
@@ -80,7 +80,7 @@
       "kind": "stage",
       "state": "live",
       "detail": "runs last",
-      "last": "2026-10-04 05:46"
+      "last": "2026-10-05 05:46"
     },
     {
       "id": "c0",
@@ -156,16 +156,16 @@
       "label": "mirror sync",
       "group": "chain-3",
       "kind": "stage",
-      "state": "scheduled",
-      "last": "2026-09-27 09:00"
+      "state": "live",
+      "last": "2026-10-04 09:00"
     },
     {
       "id": "dedup",
       "label": "dedup + append",
       "group": "chain-3",
       "kind": "stage",
-      "state": "scheduled",
-      "last": "2026-09-27 09:00"
+      "state": "live",
+      "last": "2026-10-04 09:00"
     }
   ],
   "rings": [
@@ -288,7 +288,7 @@
       "cadence": "morning chain · daily 05:45 CT",
       "tz": "America/Chicago",
       "mode": "14/14 clean",
-      "last": "2026-10-04 05:46",
+      "last": "2026-10-05 05:46",
       "rc": 0
     },
     {
@@ -304,7 +304,7 @@
       "runner": "launchd",
       "cadence": "content mirror · Sun 09:00 CT",
       "tz": "America/Chicago",
-      "last": "2026-09-27 09:00",
+      "last": "2026-10-04 09:00",
       "rc": 0
     }
   ],
@@ -315,6 +315,18 @@
     "ref": ""
   },
   "events": [
+    {
+      "ts": "2026-10-05 05:46",
+      "kind": "run",
+      "line": "morning · rc 0",
+      "ref": ""
+    },
+    {
+      "ts": "2026-10-04 09:00",
+      "kind": "run",
+      "line": "mirror · rc 0",
+      "ref": ""
+    },
     {
       "ts": "2026-10-04 05:46",
       "kind": "run",
@@ -422,18 +434,6 @@
       "kind": "wrap",
       "line": "manifest and decision sidecar regenerated",
       "ref": ""
-    },
-    {
-      "ts": "2026-09-25 05:46",
-      "kind": "run",
-      "line": "morning · rc 0",
-      "ref": ""
-    },
-    {
-      "ts": "2026-09-24 19:09",
-      "kind": "run",
-      "line": "morning · rc 0",
-      "ref": ""
     }
   ],
   "stories": [
@@ -453,7 +453,7 @@
       "value": "925",
       "unit": "23 suites",
       "source": "automation/test/all.mjs · live run",
-      "asof": "2026-10-04",
+      "asof": "2026-10-05",
       "load_bearing": true
     }
   ],
