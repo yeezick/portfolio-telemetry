@@ -2,7 +2,7 @@
   "schema": 1,
   "project": "career-ops",
   "name": "career-ops",
-  "generated_at": "2026-10-12T05:46:50-05:00",
+  "generated_at": "2026-10-13T07:57:32-05:00",
   "emitted_by": {
     "kind": "chain"
   },
@@ -39,7 +39,7 @@
       "kind": "stage",
       "state": "live",
       "detail": "40 boards",
-      "last": "2026-10-12 05:46"
+      "last": "2026-10-13 07:57"
     },
     {
       "id": "retry",
@@ -47,7 +47,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-10-12 05:46"
+      "last": "2026-10-13 07:57"
     },
     {
       "id": "score",
@@ -55,7 +55,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-10-12 05:46"
+      "last": "2026-10-13 07:57"
     },
     {
       "id": "pool",
@@ -63,7 +63,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-10-12 05:46"
+      "last": "2026-10-13 07:57"
     },
     {
       "id": "whats-new",
@@ -71,7 +71,7 @@
       "group": "chain-1",
       "kind": "stage",
       "state": "live",
-      "last": "2026-10-12 05:46"
+      "last": "2026-10-13 07:57"
     },
     {
       "id": "heartbeat",
@@ -80,7 +80,7 @@
       "kind": "stage",
       "state": "live",
       "detail": "runs last",
-      "last": "2026-10-12 05:46"
+      "last": "2026-10-13 07:57"
     },
     {
       "id": "c0",
@@ -156,7 +156,7 @@
       "label": "mirror sync",
       "group": "chain-3",
       "kind": "stage",
-      "state": "live",
+      "state": "scheduled",
       "last": "2026-10-11 09:00"
     },
     {
@@ -164,7 +164,7 @@
       "label": "dedup + append",
       "group": "chain-3",
       "kind": "stage",
-      "state": "live",
+      "state": "scheduled",
       "last": "2026-10-11 09:00"
     }
   ],
@@ -288,7 +288,7 @@
       "cadence": "morning chain · daily 05:45 CT",
       "tz": "America/Chicago",
       "mode": "14/14 clean",
-      "last": "2026-10-12 05:46",
+      "last": "2026-10-13 07:57",
       "rc": 0
     },
     {
@@ -309,12 +309,18 @@
     }
   ],
   "last_significant": {
-    "ts": "2026-10-12 05:46",
+    "ts": "2026-10-13 07:57",
     "kind": "run",
     "line": "morning · rc 0",
     "ref": ""
   },
   "events": [
+    {
+      "ts": "2026-10-13 07:57",
+      "kind": "run",
+      "line": "morning · rc 0",
+      "ref": ""
+    },
     {
       "ts": "2026-10-12 05:46",
       "kind": "run",
@@ -428,12 +434,6 @@
       "kind": "run",
       "line": "morning · rc 0",
       "ref": ""
-    },
-    {
-      "ts": "2026-09-28 22:01",
-      "kind": "wrap",
-      "line": "manifest and decision sidecar regenerated",
-      "ref": ""
     }
   ],
   "stories": [
@@ -453,7 +453,7 @@
       "value": "925",
       "unit": "23 suites",
       "source": "automation/test/all.mjs · live run",
-      "asof": "2026-10-12",
+      "asof": "2026-10-13",
       "load_bearing": true
     }
   ],
