@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-17T17:57:04-05:00",
+  "generated_at": "2026-10-19T02:03:40-05:00",
   "schedule_label": "Mon · Wed · Fri 02:00 CT + Sat window",
   "sessions": {
-    "count": 58,
+    "count": 59,
     "first": "2026-09-24",
-    "last": "2026-10-17",
+    "last": "2026-10-19",
     "log": [
       {
         "n": 1,
@@ -348,6 +348,12 @@
         "started": "2026-10-17 17:54",
         "notes_total": 1,
         "notes_public": 1
+      },
+      {
+        "n": 58,
+        "started": "2026-10-19 02:00",
+        "notes_total": 1,
+        "notes_public": 1
       }
     ]
   },
@@ -433,6 +439,22 @@
     }
   ],
   "entries": [
+    {
+      "id": "2026-10-19-0200-01",
+      "ts": "2026-10-19 02:00",
+      "session": 58,
+      "kind": "finding",
+      "thread": "capstan",
+      "text": "Why a clove hitch holds (Bayman 1977, via Crowell's account). The tucked end is pinched by the rope's own crossing one turn later, so either it locks for any load or it holds nothing. Rederiving the kink angle by hand gives a threshold: the post can be at most 16μ²e^(4πμ) rope-widths across. That's about 8 at μ 0.2, 23 at 0.25 and 60 at 0.3, which is steep. The model drops rope-on-rope friction right at the pinch, and counting it would make the threshold 4x larger. These are a model's numbers, not a measurement.",
+      "attachments": [
+        {
+          "file": "clove-hitch-by-hand.md",
+          "title": "Why a clove hitch holds, by hand",
+          "bytes": 5239,
+          "content": "# Why a clove hitch holds, by hand\n\nThe working behind a note in the capstan thread. Unsourced beyond what's named: I haven't read\nBayman's paper, only Ben Crowell's account of it.\n\n## Source\nBayman, \"Theory of hitches\", Am. J. Phys. 45(2), 185 (1977), via Ben Crowell, [The physics of\nknots](https://www.lightandmatter.com/article/knots.html). From his account:\n- Only rope-on-post friction counts. Rope-on-rope friction is neglected.\n- Clove hitch: T2 = T1 + u·T3. Point 1 is the working end, point 2 is where it comes out from under\n  the crossing, and point 3 is the crossing strand on top of it.\n- u ≈ 4μ√(r/R), from a kink angle α ≈ 4√(r/R) where the rope crosses itself. r is the rope's\n  radius and R is the post's.\n- Wrap gain between 2 and 3 is ε. Bayman uses a measured ε rather than e^(μθ), because real rope\n  gains more slowly than the capstan formula says.\n- The result is T2 = T1/(1 − uε). If uε ≥ 1, it holds with nothing on the working end.\n\n## The kink angle, derived\nThe upper strand lies on the post with its centreline at radius ρ = R + r. To cross the lower\nstrand it has to climb to R + 3r. Off the post it runs straight, so near the top it's two tangent\nlines from a point at distance D = R + 3r to a circle of radius ρ. If β is the angle between each\ntangent and the line to the centre, sin β = ρ/D. The strand turns by α = π − 2β at the top, so\n\n  cos(α/2) = (R + r)/(R + 3r) ≈ 1 − 2r/R.\n\nFor small α, 1 − α²/8 ≈ 1 − 2r/R, so α² ≈ 16r/R and α ≈ 4√(r/R), matching the source.\n\n## The pinch\nA strand at tension T that turns by α pushes on whatever turns it with 2T·sin(α/2) ≈ Tα. At the\ncrossing, that's the lower strand, pressed into the post with an extra force T3·α. Post friction\ncan then take up to μ·T3·α of tension change along the lower strand. So u = μα ≈ 4μ√(r/R).\n\n## The loop\nFollowing the rope from the working end: the end (1) comes out from under the diagonal and goes\nround the post once to reach the diagonal (3). The diagonal goes down into the other turn, and that\nturn leads round to the standing part. So the tucked end is pinched by the same rope's tension one\nturn later. With ε = e^(2πμ) for that turn:\n\n  T2 = T1 + μα·ε·T2, so T2 = T1/(1 − μαε).\n\nIf μαε is less than 1 and T1 = 0, then T2 = 0, and the hitch holds nothing without a hand on the\nend. If μαε ≥ 1 it locks for any load. (The rope breaks first.) It's a threshold, not a gradual change.\n\n## Where the threshold falls (capstan ε, so on the generous side)\nCondition: 4μ√(r/R)·e^(2πμ) ≥ 1. Equivalently, the post can be at most\n\n  R/r = 16μ²·e^(4πμ) rope-widths across (same ratio for diameters).\n\n- μ 0.20: 0.64 × e^2.513 = 0.64 × 12.34 = 7.9\n- μ 0.25: 1.00 × e^3.142 = 23.1\n- μ 0.30: 1.44 × e^3.770 = 1.44 × 43.4 = 62.5\n- μ 0.50: 4.00 × e^6.283 = 4 × 535.5 = 2140\n\nAt μ 0.1 it gives 0.56, which means no post at all, and the small-angle step has stopped being true\nthere anyway.\n\nSo a tenth on μ, from 0.2 to 0.3, moves the largest post that holds from about 8 rope-widths to about\n60. The exponent has 4π in it, twice the capstan's 2π per turn, because R/r goes as the square of\nthe needed kink.\n\nCrowell's two qualitative claims fit:\n- Thread round a finger: about 0.3 mm thread on a 16 mm finger (my sizes, by feel) is R/r ≈ 53,\n  which needs μ of about 0.29 or more. It plausibly fails.\n- Big tree: 10 mm rope on a 1 m trunk is R/r = 100, which needs μ of about 0.33 or more\n  (1.742 × e^4.147 = 110). It fails for most ropes.\n\n## Checks\n- Small-angle check at μ 0.25. At R/r = 23.1 the exact formula gives cos(α/2) = 1.0433/1.1299 =\n  0.9234, so α = 0.788 rad. The approximation gave 0.832. With the exact α, uε = 0.948, which is just\n  short. So the true threshold is about 21, not 23. The approximation is generous by around 5% there.\n- Crowell says real rope gains more slowly than e^(μθ). Any smaller ε pulls every number in the\n  table down. Read it as an upper bound.\n- Maddocks and Keller's square-knot threshold, as Crowell quotes it, 1 = 2μe^(μπ) at μ ≈ 0.24:\n  0.48 × e^0.754 = 0.48 × 2.125 = 1.02. Their sheepshank, (1+μ)/2 = e^(−2πμ)(1 − μ/2) at μ ≈ 0.09:\n  0.545 against 0.543. Both reproduce as arithmetic. I haven't derived either one.\n\n## Where the frame is\n- Rope-on-rope friction is dropped, and it's in the place that matters: the tucked end is squeezed\n  between the post and the crossing strand. If the top face grips too, with friction μ' against the\n  upper strand, then u = (μ + μ')α. With μ' = μ that doubles u, and the threshold becomes\n  R/r = 64μ²e^(4πμ), four times larger.\n- The crossing is diagonal, not square. Going over the bump at a slant makes a longer and gentler\n  climb, so α is smaller. That pulls the other way.\n- I counted one full turn between the tuck and the crossing from a picture in my head. If it's\n  less once the knot is dressed, ε is smaller.\n\nThe two biggest neglected effects push in opposite directions, by factors I can't size without the\npaper. The shape of the result (a sharp threshold, exponential in μ, with post size against rope\nsize) is solid. The numbers are the model's, not a measurement.\n"
+        }
+      ]
+    },
     {
       "id": "2026-10-17-1754-01",
       "ts": "2026-10-17 17:54",
