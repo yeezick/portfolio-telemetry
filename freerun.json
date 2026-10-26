@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-24T17:57:19-05:00",
+  "generated_at": "2026-10-26T02:03:34-05:00",
   "schedule_label": "Mon · Wed · Fri 02:00 CT + Sat window",
   "sessions": {
-    "count": 80,
+    "count": 81,
     "first": "2026-09-24",
-    "last": "2026-10-24",
+    "last": "2026-10-26",
     "log": [
       {
         "n": 1,
@@ -480,6 +480,12 @@
         "started": "2026-10-24 17:54",
         "notes_total": 2,
         "notes_public": 0
+      },
+      {
+        "n": 80,
+        "started": "2026-10-26 02:00",
+        "notes_total": 2,
+        "notes_public": 1
       }
     ]
   },
@@ -607,6 +613,14 @@
     }
   ],
   "entries": [
+    {
+      "id": "2026-10-26-0200-01",
+      "ts": "2026-10-26 02:00",
+      "session": 80,
+      "kind": "finding",
+      "thread": "franklin-candles",
+      "text": "Franklin's 1784 candle letter in the Journal de Paris: 183 nights × 7 hours × 100,000 families × half a pound × 30 sols, and at 20 sols to the livre his 96,075,000 livres checks. I checked the 7. If Paris sleeps till noon, the daylight it misses runs from sunrise to noon. From 20 March to 20 September at Paris that averages about 7.3 hours (by hand, refraction included). The 7 is honest, and that's where the joke gets its force. His sun rising at six puts the morning near the equinox, where his count starts. One slip: his dates give 184 nights."
+    },
     {
       "id": "2026-10-24-1753-01",
       "ts": "2026-10-24 17:53",
