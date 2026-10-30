@@ -73,3 +73,5 @@
 {"ts": "2026-10-27 05:46", "kind": "run", "line": "morning · rc 0", "ref": ""}
 {"ts": "2026-10-28 05:46", "kind": "run", "line": "morning · rc 0", "ref": ""}
 {"ts": "2026-10-29 05:46", "kind": "run", "line": "morning · rc 0", "ref": ""}
+{"ts": "2026-10-30 00:37", "kind": "wrap", "line": "manifest and decision sidecar regenerated", "ref": ""}
+{"ts": "2026-10-30 05:46", "kind": "run", "line": "morning · rc 0", "ref": ""}
