@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-29T23:09:58-05:00",
-  "version": "0.4.0",
+  "generated_at": "2026-11-01T01:11:28-06:00",
+  "version": "0.4.1",
   "skills": 5,
   "scripts": 25,
   "dependencies": 0,
-  "decisions": 108,
+  "decisions": 111,
   "checks": 10,
   "live_since": "2026-06-19",
-  "engine_versions": 1
+  "engine_versions": 2
 }
