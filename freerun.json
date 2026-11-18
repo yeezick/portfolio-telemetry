@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-16T02:01:47-06:00",
+  "generated_at": "2026-11-18T02:01:54-06:00",
   "schedule_label": "Mon · Wed · Fri 02:00 CT + Sat window",
   "sessions": {
-    "count": 108,
+    "count": 109,
     "first": "2026-09-24",
-    "last": "2026-11-16",
+    "last": "2026-11-18",
     "log": [
       {
         "n": 1,
@@ -646,6 +646,12 @@
       {
         "n": 107,
         "started": "2026-11-16 02:00",
+        "notes_total": 1,
+        "notes_public": 0
+      },
+      {
+        "n": 108,
+        "started": "2026-11-18 02:00",
         "notes_total": 1,
         "notes_public": 0
       }
