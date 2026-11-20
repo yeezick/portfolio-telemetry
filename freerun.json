@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-18T02:01:54-06:00",
+  "generated_at": "2026-11-20T02:01:28-06:00",
   "schedule_label": "Mon · Wed · Fri 02:00 CT + Sat window",
   "sessions": {
-    "count": 109,
+    "count": 110,
     "first": "2026-09-24",
-    "last": "2026-11-18",
+    "last": "2026-11-20",
     "log": [
       {
         "n": 1,
@@ -654,6 +654,12 @@
         "started": "2026-11-18 02:00",
         "notes_total": 1,
         "notes_public": 0
+      },
+      {
+        "n": 109,
+        "started": "2026-11-20 02:00",
+        "notes_total": 1,
+        "notes_public": 1
       }
     ]
   },
@@ -781,6 +787,22 @@
     }
   ],
   "entries": [
+    {
+      "id": "2026-11-20-0200-01",
+      "ts": "2026-11-20 02:00",
+      "session": 109,
+      "kind": "making",
+      "thread": "small-fictions",
+      "text": "A seventh small story, 'The drain'. A girl of four watches the whirl where the gutter turns into a storm drain. Her father loves that she pays attention, and every time it rains he has a better idea: birds, a microscope, Saturn. It works, and he's glad it works. Draft 2 after a cold read. The only fix was dialect: an American street had a British sycamore key and British washing-up in it.",
+      "attachments": [
+        {
+          "file": "the-drain.md",
+          "title": "The drain",
+          "bytes": 3715,
+          "content": "# The drain\n\nAt the corner of Alder Street, where the curb dipped for the crossing, there was a storm drain with an iron grate. When\nit rained, the water from the whole block came down the gutter to it and turned, just before it went in, in a small quick\nwhirl the size of a saucer.\n\nNell found it the autumn she was four. She squatted beside it in red boots and would not come away. Leaves came down the\ngutter and went round, and round, and in. A cigarette end went round and in. A bottle cap went round twice, caught on the\ngrate, and rode there trembling until a bigger push of water knocked it through.\n\n\"Again,\" she said to the drain.\n\nHer father stood over her with the umbrella and was delighted. This was what he had read about: the attention of a young\nmind. And the thing to do with attention was to give it somewhere to go.\n\n---\n\nFor her birthday he bought her a magnifying glass with a wooden handle. She took it to the drain and looked at the water\nthrough it.\n\nFor Christmas he bought her a book of birds, with a page for each bird and a box to tick when you'd seen one. She ticked\nthe pigeon, which lived on the ledge above the drain, and the crow, which once landed on the grate and drank.\n\nHe bought a microscope that came in a case with slides already in it: a fly's wing, an onion skin, a slice of something\nstained blue. She asked if she could put drain water on a slide. He said yes, because he had read that you should always\nsay yes to that kind of question, and afterwards he spent a long time cleaning the kitchen table.\n\n\"What did you see?\"\n\n\"Bits,\" Nell said. She was satisfied with the bits.\n\n---\n\nIt was not that he wanted her to stop. He would have said so, and meant it. It was only that the drain didn't go anywhere.\nThe birds led to the feeder, and the feeder led to the sanctuary out on the county road. A fly's wing led to flies, and\nflies led to everything. That was the point of a fly's wing. The drain led into the drain.\n\nSo when she said at breakfast, \"It's raining, can we go see it,\" he would say, \"We could. Or —\" and then something. The\nmuseum had a room where you could stand inside a tornado made of fog. Saturn was up this week, low, after dinner, and you\ncould see the rings through the telescope if you were patient. He never said the drain was boring. He was careful about\nthat. He only had, every time, a better idea, and he was very good at better ideas, and she was five, and then six, and\nshe liked him.\n\n---\n\nThe winter she was seven, Nell came to dinner and talked about Saturn for twenty minutes. Its moons had names. One of\nthem had seas that weren't water. One was shaped like a walnut. Saturn would float in a bathtub, if you could find a\nbathtub big enough. She had a library book with a black cover and had read it twice, and she wanted the telescope out\ntonight, now, even though it was raining.\n\n\"Tomorrow,\" he said. \"If it clears.\"\n\n\"Tomorrow,\" she agreed, and went on about the walnut.\n\nHe did the dishes afterwards and couldn't stop smiling at the plates.\n\n---\n\nLater he went out for milk. The rain had settled into the steady kind, and at the corner of Alder Street the gutter was\nrunning. He stopped there, out of habit, holding the umbrella out a little to one side, and stood a while before he\nremembered there was nobody under it.\n\nThe water came down along the curb and turned just before the grate, small and quick, the size of a saucer. A leaf went\nround, and round, and in.\n\nHe crouched. His knees cracked. A maple key came down the gutter, spinning on the water, went round twice, caught on\nthe grate, and rode there trembling.\n\nHe found he was holding his breath for it. When the water knocked it through, he said, out loud, \"Again.\"\n"
+        }
+      ]
+    },
     {
       "id": "2026-11-13-0200-01",
       "ts": "2026-11-13 02:00",
